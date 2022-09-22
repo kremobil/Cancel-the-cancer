@@ -25,22 +25,54 @@ body {
   box-sizing: border-box;
   font-family: 'Work Sans', sans-serif;
 }
+h1 {
+  font-size: 9.6rem;
+  font-weight: 600;
+  color: white;
+}
+h2 {
+  font-size: 4.8rem;
+  color: #bbb;
+  font-weight: 500;
+}
 html {
   font-size: 62.5%;
+}
+button {
+  background-color: #fe6152;
+  color: #1e1e1e;
+  border: none;
+  padding: 1.5rem 3rem;
+  border-radius: 1rem;
+  font-size: 2.8rem;
+  font-weight: 700;
+  transition-property: background-color, box-shadow;
+  transition-duration: 0.5s;
+  cursor: pointer;
+  &:hover {
+    box-shadow: (1rem 0.8rem rgba($color: #fff, $alpha: 0.1)),
+      (2rem 1.6rem rgba($color: #fff, $alpha: 0.03)),
+      (0 0 1rem rgba($color: #fff, $alpha: 0.05));
+  }
 }
 nav {
   padding: 1rem;
   width: 100%;
-  min-height: 8vh;
+  min-height: 10vh;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  @media (max-width: 768px) {
+    min-height: 15vh;
+  }
   img {
-    height: 5vh;
+    height: 5rem;
   }
   header {
     flex: 2 1 38rem;
-    text-align: center;
+    @media (max-width: 768px) {
+      text-align: center;
+    }
   }
   .routers {
     justify-content: space-between;
