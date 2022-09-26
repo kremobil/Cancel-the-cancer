@@ -57,7 +57,7 @@ button {
 }
 nav {
   padding: 1rem;
-  width: 100%;
+  width: 90%;
   min-height: 10vh;
   display: flex;
   align-items: center;
@@ -66,7 +66,7 @@ nav {
     min-height: 15vh;
   }
   img {
-    height: 5rem;
+    width: 50%;
   }
   header {
     flex: 2 1 38rem;
@@ -137,8 +137,9 @@ nav {
   }
 }
 .app-wrapper {
-  width: 90%;
-  margin: auto;
-  height: 180vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 </style>
