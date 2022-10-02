@@ -10,7 +10,11 @@
         <router-link to="/try">Przetestuj</router-link>
       </div>
     </nav>
-    <router-view />
+    <router-view v-slot="{ Component }">
+      <transition name="fade">
+        <component :is="Component" />
+      </transition>
+    </router-view>
   </div>
 </template>
 <script></script>
@@ -36,7 +40,14 @@ h2 {
   font-weight: 500;
 }
 html {
-  font-size: 62.5%;
+  font-size: 50%;
+  @media (max-width: 1024px) {
+    font-size: 36.5%;
+  }
+  @media (max-width: 768px) {
+    font-size: 28%;
+    text-align: center;
+  }
 }
 button {
   background-color: #fe6152;
@@ -44,11 +55,13 @@ button {
   border: none;
   padding: 1.5rem 3rem;
   border-radius: 1rem;
-  font-size: 2.8rem;
+  font-size: 4.2rem;
   font-weight: 700;
   transition-property: background-color, box-shadow;
   transition-duration: 0.5s;
   cursor: pointer;
+  span {
+  }
   &:hover {
     box-shadow: (1rem 0.8rem rgba($color: #fff, $alpha: 0.1)),
       (2rem 1.6rem rgba($color: #fff, $alpha: 0.03)),
@@ -69,7 +82,7 @@ nav {
     width: 50%;
   }
   header {
-    flex: 2 1 38rem;
+    flex: 2 1 61rem;
     @media (max-width: 768px) {
       text-align: center;
     }
@@ -78,17 +91,17 @@ nav {
     justify-content: space-between;
     align-items: center;
     display: flex;
-    padding: 0.6rem 0;
-    flex: 1 1 38rem;
+    padding: 1.2rem 0;
+    flex: 1 1 61rem;
     a {
-      font-size: 2.8rem;
+      font-size: 4.2rem;
       font-family: 'Anton', sans-serif;
       color: white;
       text-decoration: none;
       position: relative;
       &:last-child {
         border: 0.2rem solid #fe6152;
-        padding: 0.2rem 1rem;
+        padding: 0.6rem 2rem;
         border-radius: 1rem;
       }
       @media (max-width: 768px) {
@@ -141,5 +154,20 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition-property: transform, opacity;
+  position: absolute;
+  transition: 0.5s ease;
+  left: 0;
+  top: 0;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  position: absolute;
+  transform: translateX(100%);
+  opacity: 0;
 }
 </style>
