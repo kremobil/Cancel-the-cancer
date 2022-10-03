@@ -157,9 +157,8 @@ nav {
 }
 .fade-enter-active,
 .fade-leave-active {
-  transition-property: transform, opacity;
   position: absolute;
-  transition: 0.5s ease;
+  transition: all 0.5s ease;
   left: 0;
   top: 0;
 }

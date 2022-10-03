@@ -12,7 +12,14 @@
     </div>
     <form action="">
       <button type="submit">submit</button>
-      <input type="file" name="filw" id="file" />
+      <div class="img-upload">
+        <div class="main">
+          <input type="file" name="filw" id="file" />
+          <label for="file">Dodaj zdjęcie</label>
+          <h2>Zebra.png</h2>
+        </div>
+        <img src="../assets/hero_img.svg" alt="" />
+      </div>
     </form>
   </div>
 </template>
@@ -57,19 +64,54 @@ export default {};
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-column-gap: 6rem;
-    input {
+    .img-upload {
+      border: 0.6rem solid #fe6152;
       width: 100%;
       height: 100%;
-      background-color: #00000010;
-      &::after {
-        background: none;
-      }
-      border: 0.5rem solid #fe6152;
-      text-align: center;
-      padding: auto;
       display: flex;
-      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      h2 {
+        font-size: 3.6rem;
+        margin: 2.4rem 0;
+      }
+      .main {
+        height: 80%;
+        padding: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-right: #fe6152 solid 0.5rem;
+        text-align: right;
+        margin-right: 2rem;
+        align-items: flex-end;
+        input {
+          display: none;
+        }
+        label {
+          background-color: #fe6152;
+          color: #1e1e1e;
+          border: none;
+          padding: 1.5rem 3rem;
+          border-radius: 1rem;
+          font-size: 3.6rem;
+          font-weight: 700;
+          transition-property: background-color, box-shadow;
+          transition-duration: 0.5s;
+          cursor: pointer;
+          span {
+          }
+          &:hover {
+            box-shadow: (1rem 0.8rem rgba($color: #fff, $alpha: 0.1)),
+              (2rem 1.6rem rgba($color: #fff, $alpha: 0.03)),
+              (0 0 1rem rgba($color: #fff, $alpha: 0.05));
+          }
+        }
+      }
     }
   }
+}
+img {
+  width: 30%;
 }
 </style>
