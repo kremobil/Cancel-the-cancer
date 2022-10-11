@@ -22,6 +22,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Work+Sans:ital,wght@0,400;0,500;1,600&display=swap');
 body {
   background-color: #28353b;
+  overflow-x: hidden;
 }
 * {
   margin: 0;

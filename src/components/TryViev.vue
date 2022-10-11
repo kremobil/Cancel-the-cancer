@@ -3,28 +3,61 @@
     <div class="text">
       <h1>Sprawdź swoje znamiona</h1>
       <h2>
-        wystarczy że dodasz zdjecie sowjego znamienia a nasz model sprawdzi czy
-        stanowi on zagrożenie rakowe
+        Wystarczy, że dodasz zdjęcie swojego znamienia, a nasz model sprawdzi,
+        czy stanowi on zagrożenie rakowe.
       </h2>
     </div>
     <div class="image">
       <img src="../assets/try.svg" alt="man looking at files" />
     </div>
-    <form action="">
+    <form action="" @submit.prevent="predict">
       <button type="submit">submit</button>
       <div class="img-upload">
         <div class="main">
-          <input type="file" name="filw" id="file" />
+          <input
+            type="file"
+            name="filw"
+            id="file"
+            @change="upload"
+            accept="image/*"
+            :class="{ upload: this.name != '' }"
+          />
           <label for="file">Dodaj zdjęcie</label>
-          <h2>Zebra.png</h2>
+          <h2 id="text">{{ name }}</h2>
         </div>
-        <img src="../assets/hero_img.svg" alt="" />
+        <img
+          src="../assets/hero_img.svg"
+          alt=""
+          id="image"
+          v-show="name != ''"
+        />
       </div>
     </form>
   </div>
 </template>
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      name: '',
+    };
+  },
+  methods: {
+    upload() {
+      const input = document.querySelector('#file');
+      const image = document.querySelector('#image');
+      let reader = new FileReader();
+      reader.readAsDataURL(input.files[0]);
+      reader.onload = () => {
+        image.setAttribute('src', reader.result);
+      };
+      this.name = input.files[0].name;
+    },
+    predict() {
+      alert('Przykro nam ale napotkaliśmy błąd przepraszamy za utrudnienia');
+    },
+  },
+};
 </script>
 <style lang="scss" scoped>
 .site-wrapper {
@@ -38,6 +71,12 @@ export default {};
   grid-template-columns: 2fr 2fr 3fr;
   grid-template-rows: 1fr 2fr 1fr;
   grid-gap: 8rem;
+  @media screen and (max-width: 768px) {
+    grid-template-areas:
+      'txt txt txt'
+      'frm img img'
+      'frm img img';
+  }
   .image {
     grid-area: img;
     justify-content: center;
@@ -45,6 +84,10 @@ export default {};
     display: flex;
     width: 100%;
     height: 100%;
+    img {
+      max-width: 80%;
+      max-height: 80%;
+    }
     background-color: rgba($color: #000000, $alpha: 0.1);
   }
   .text {
@@ -58,12 +101,23 @@ export default {};
     justify-content: space-around;
     display: flex;
     flex-direction: column;
+    h1 {
+      font-size: 6.4rem;
+    }
+    h2 {
+      font-size: 4.8rem;
+    }
   }
   form {
     grid-area: frm;
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-column-gap: 6rem;
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 3fr;
+      grid-row-gap: 6rem;
+    }
     .img-upload {
       border: 0.6rem solid #fe6152;
       width: 100%;
@@ -71,6 +125,10 @@ export default {};
       display: flex;
       align-items: center;
       justify-content: center;
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+        text-align: center;
+      }
       h2 {
         font-size: 3.6rem;
         margin: 2.4rem 0;
@@ -81,10 +139,12 @@ export default {};
         display: flex;
         flex-direction: column;
         justify-content: center;
-        border-right: #fe6152 solid 0.5rem;
         text-align: right;
-        margin-right: 2rem;
         align-items: flex-end;
+        @media screen and (max-width: 768px) {
+          align-items: center;
+          height: auto;
+        }
         input {
           display: none;
         }
@@ -99,6 +159,7 @@ export default {};
           transition-property: background-color, box-shadow;
           transition-duration: 0.5s;
           cursor: pointer;
+          text-align: center;
           span {
           }
           &:hover {
@@ -111,7 +172,19 @@ export default {};
     }
   }
 }
-img {
-  width: 30%;
+form img {
+  @media screen and (min-width: 768px) {
+    height: 80%;
+    border-left: #fe6152 solid 0.5rem;
+    padding-left: 4rem;
+    max-height: 30rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 80%;
+    border-top: #fe6152 solid 0.5rem;
+    padding-top: 4rem;
+    max-width: 30rem;
+  }
 }
 </style>
