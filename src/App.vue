@@ -5,8 +5,8 @@
         <img src="./assets/logo.png" alt="Cancel the cancer logo" />
       </header>
       <div class="routers">
-        <router-link to="/">Home</router-link>
-        <router-link to="/about">About</router-link>
+        <router-link to="/">Strona główna</router-link>
+        <router-link to="/about">O nas</router-link>
         <router-link to="/try">Przetestuj</router-link>
       </div>
     </nav>
@@ -15,6 +15,14 @@
         <component :is="Component" />
       </transition>
     </router-view>
+    <footer>
+      <h3>
+        Wiktor Fajkowski &copy; 2022 | Modelprzygotowany na konkurs
+        <a href="https://ai4youth.edu.pl/" target="_blank"
+          >AI&nbsp;for&nbsp;youth</a
+        >
+      </h3>
+    </footer>
   </div>
 </template>
 <script></script>
@@ -49,6 +57,25 @@ html {
     font-size: 28%;
     text-align: center;
   }
+}
+footer {
+  margin-top: 5rem;
+  width: 100%;
+  padding: 3rem;
+  text-align: center;
+  h3 {
+    font-size: 2.8rem;
+    a {
+      color: #fe6152;
+      text-decoration: none;
+      transition: color 0.25s linear;
+      &:hover {
+        color: #b9000f;
+      }
+    }
+  }
+  background-color: #1e1e1e;
+  color: white;
 }
 button {
   background-color: #fe6152;
@@ -159,15 +186,31 @@ nav {
 .fade-enter-active,
 .fade-leave-active {
   position: absolute;
-  transition: all 0.5s ease;
-  left: 0;
-  top: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  left: 0%;
+  top: 12%;
+  transform: scale(0);
+}
+.fade-enter-active ~ footer,
+.fade-leave-active ~ footer {
+  display: none;
 }
 
 .fade-enter-from,
 .fade-leave-to {
-  position: absolute;
-  transform: translateX(100%);
+  transform: scale(0);
   opacity: 0;
+}
+.line {
+  width: 50%;
+  height: 0.4rem;
+  background-color: #fe6152;
+  border: none;
+  margin: 2rem 0;
+}
+.fade-enter-to,
+.fade-leave-from {
+  transform: scale(1);
+  opacity: 1;
 }
 </style>

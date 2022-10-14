@@ -6,7 +6,7 @@
           <h1>Nie daj się zaskoczyć!</h1>
           <h2>
             Dzięki naszemu modelowi sztucznej inteligencji sprawdzisz czy
-            zamiana na twojej skórze jest zagrożeniem.
+            znamiona na twojej skórze są zagrożeniem dla zdrowia.
           </h2>
         </div>
         <img
@@ -14,7 +14,7 @@
           src="../assets/hero_img.svg"
           alt="2 odctors ilustration"
         />
-        <button>Sprawdź teraz</button>
+        <router-link to="/try">Sprawdź teraz</router-link>
       </article>
       <img
         id="desktop-img"
@@ -29,45 +29,35 @@
       </section>
     </section>
     <section id="who">
-      <h1>Dla Kogo jest Ten projekt?</h1>
+      <h1>Dla kogo jest ten projekt?</h1>
       <h2>
-        Nasz projekt kierujemy głównie dla lekarzy i medyków ze względu na to że
-        nasz model trenowany jest głownie na zdjęciach robionych w
-        profesjonalnych warunkach. Z tego też powodu wyniki modelu na zdjęciach
-        robionych w warunkach domowych mogą być gorsze. mimo wszystko w
-        przyszłości zamierzamy ulepszać nasz projekt aby każdy mógł sprawdzić
-        swoje zmiany skórne na codzień. należy jednak pamiętać że wciąż ważne są
-        kontrole naszych zmian skórnych.
+        W obecnym momencie nasz projekt kierujemy głównie do lekarzy i medyków
+        ze względu na to, że nasz model trenowany jest głównie na zdjęciach
+        wykonanych w profesjonalnych warunkach. Z tego też powodu wyniki modelu
+        na zdjęciach robionych w warunkach domowych mogą być gorsze. Mimo
+        wszystko w przyszłości zamierzamy ulepszać nasz projekt, aby każdy mógł
+        sprawdzić swoje zmiany skórne na codzień. Należy jednak pamiętać, że
+        wciąż ważne są kontrole naszych zmian skórnych u dermatologa.
       </h2>
-      <button>
+      <a href="" target="_blank">
         Pobierz za darmo
         <span class="material-symbols-outlined"> file_download </span>
-      </button>
+      </a>
     </section>
     <section id="why">
       <h1>Cel naszego projektu.</h1>
       <img src="../assets/rule.png" alt="dobre zdorwie i jakość życia" />
       <h2>
-        Nasz projekt tworzymy z myślą o tym by ułatwić wczesne wykrycie raka
-        skóry i zapobieganie zanim się rozwinie. rak jest to okropna choroba
-        która atakuje z niencacka rocznie ok 100tys. osób umiera na tą okropną
-        chorobę. dzięki wczesnemu wykryciu mamy niemal stuprocentowe szanse na
-        jego wyleczenie. planujemy aby każdy mógł sprawdzić czy jego zmiany
-        skórne stanową zagrożenie i zaczą się leczyć jeśli jest to knieczne.
-        Nasz projekt tworzymy z myślą o tym by ułatwić wczesne wykrycie raka
-        skóry i zapobieganie zanim się rozwinie. rak jest to okropna choroba
-        która atakuje z niencacka rocznie ok 100tys. osób umiera na tą okropną
-        chorobę. dzięki wczesnemu wykryciu mamy niemal stuprocentowe szanse na
-        jego wyleczenie. planujemy aby każdy mógł sprawdzić czy jego zmiany
-        skórne stanową zagrożenie i zaczą się leczyć jeśli jest to knieczne.
+        Nasz projekt tworzymy z myślą o tym, by ułatwić wczesne wykrycie zmian
+        nowotworowych skóry i zapobiegać ich rozwojowi. Rak jest to śmiertelna
+        choroba, która atakuje niespodziewanie. Rocznie ok. 100tys. ludzi umiera
+        na tę okropną chorobę. Dzięki wczesnemu wykrywaniu niebezpiecznych
+        znamion mamy znacznie większe szanse na jego wyleczenie. Planujemy, aby
+        każdy mógł sprawdzić czy jego zmiany skórne stanową zagrożenie, i w
+        razie potrzeby podjął leczenie, bądź skonsultował się z lekarzem
+        dermatologiem lub onkologiem.
       </h2>
     </section>
-    <!-- <section class="back-deco">
-      <div class="x"></div>
-      <div class="x"></div>
-      <div class="x"></div>
-      <div class="x"></div>
-    </section> -->
   </div>
 </template>
 <script>
@@ -86,6 +76,26 @@ export default {};
   justify-content: space-around;
   align-items: flex-start;
   height: 90vh;
+}
+a {
+  background-color: #fe6152;
+  color: #1e1e1e;
+  border: none;
+  padding: 1.5rem 3rem;
+  border-radius: 1rem;
+  font-size: 4.2rem;
+  font-weight: 700;
+  transition-property: background-color, box-shadow;
+  transition-duration: 0.5s;
+  cursor: pointer;
+  span {
+  }
+  &:hover {
+    box-shadow: (1rem 0.8rem rgba($color: #fff, $alpha: 0.1)),
+      (2rem 1.6rem rgba($color: #fff, $alpha: 0.03)),
+      (0 0 1rem rgba($color: #fff, $alpha: 0.05));
+  }
+  text-decoration: none;
 }
 #desktop-img {
   width: 50%;
@@ -107,14 +117,23 @@ export default {};
   justify-content: space-between;
   align-items: center;
   margin: auto;
+  @media screen and (max-width: 768px) {
+    padding: 5rem 0;
+  }
 }
 #who {
   width: 100%;
-  height: 100vh;
-  padding: 3rem 5%;
+  min-height: 100vh;
+  padding: 5rem 5%;
   border-top: 3px solid #fe6152;
   border-bottom: 3px solid #fe6152;
-  background: linear-gradient(rgba(#2f130f, 0.45), rgba(#2f130f, 0.9)),
+  background: linear-gradient(
+      transparent,
+      rgba(black, 0.2),
+      rgba(black, 0.2),
+      transparent
+    ),
+    linear-gradient(rgba(#2f130f, 0.45), rgba(#2f130f, 0.9)),
     url('../assets/back-ground.jpg');
   background-size: cover;
   background-position: center;
@@ -124,6 +143,7 @@ export default {};
   h2 {
     font-size: 4.2rem;
     text-align: center;
+    padding: 4rem 0;
   }
   display: flex;
   flex-direction: column;
@@ -132,11 +152,12 @@ export default {};
 }
 #why {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
+  padding: 5rem 0;
   text-align: center;
   img {
     width: 50rem;

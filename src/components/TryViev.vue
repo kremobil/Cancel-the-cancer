@@ -4,14 +4,14 @@
       <h1>Sprawdź swoje znamiona</h1>
       <h2>
         Wystarczy, że dodasz zdjęcie swojego znamienia, a nasz model sprawdzi,
-        czy stanowi on zagrożenie rakowe.
+        czy stanowi ono zagrożenie rakowe.
       </h2>
     </div>
     <div class="image">
       <img src="../assets/try.svg" alt="man looking at files" />
     </div>
     <form action="" @submit.prevent="predict">
-      <button type="submit">submit</button>
+      <button type="submit">Sprawdź!</button>
       <div class="img-upload">
         <div class="main">
           <input
@@ -54,7 +54,14 @@ export default {
       this.name = input.files[0].name;
     },
     predict() {
-      alert('Przykro nam ale napotkaliśmy błąd przepraszamy za utrudnienia');
+      const input = document.querySelector('#file');
+      if (input.files[0] == undefined) {
+        alert('Musisz dodać zdjęcie');
+      } else {
+        alert(
+          'Przykro nam ale ze względu obecnej dokładności modelu nie chcieliśmy wprowadzić nikogo w błąd dlatego wyłączyliśmy tę opcję. Przepraszamy za utrudnienia i zachęcamy do pobrania plików projektu'
+        );
+      }
     },
   },
 };
@@ -62,7 +69,7 @@ export default {
 <style lang="scss" scoped>
 .site-wrapper {
   width: 90%;
-  height: 85vh;
+  min-height: 85vh;
   display: grid;
   grid-template-areas:
     'img img txt'
@@ -74,8 +81,9 @@ export default {
   @media screen and (max-width: 768px) {
     grid-template-areas:
       'txt txt txt'
-      'frm img img'
-      'frm img img';
+      'img img img'
+      'frm frm frm';
+    grid-template-rows: 1fr 1fr 1fr;
   }
   .image {
     grid-area: img;
@@ -123,6 +131,7 @@ export default {
       width: 100%;
       height: 100%;
       display: flex;
+      padding: 3rem;
       align-items: center;
       justify-content: center;
       @media screen and (max-width: 768px) {
