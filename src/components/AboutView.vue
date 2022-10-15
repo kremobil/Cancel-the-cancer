@@ -11,11 +11,11 @@
         Siemiradzkiego w Bydgoszczy. Pomysł na projekt zrodził się podczas kursu
         "AI&nbsp;for&nbsp;youth" organizowanego w naszej szkole przez firmę
         Intel. Naszym opiekunem, a zarazem prowadzącym szkolenie na etapie
-        szkolnym był pan&nbsp;Paweł Sankowski, któremu chcieliśmy z tego miejsca
-        podziękować za opiekę nad projektem. Mamy szczerą nadzieję, że projekt,
-        który tworzymy pomoże wielu ludziom, i że z&nbsp;biegiem czasu uda się
-        go dopracować na tyle, by był on używany na codzień, by jak najwcześniej
-        wykrywać raka skóry.
+        szkolnym był pan&nbsp;wicedyrektor&nbsp;Paweł Sankowski, któremu
+        chcieliśmy z tego miejsca podziękować za opiekę nad projektem. Mamy
+        szczerą nadzieję, że projekt, który tworzymy pomoże wielu ludziom, i że
+        z&nbsp;biegiem czasu uda się go dopracować na tyle, by był on używany na
+        codzień, by jak najwcześniej wykrywać raka skóry.
         <br />
       </h2>
     </section>
@@ -32,9 +32,10 @@
             <p>
               Jestem uczniem klasy 2 technikum, moją pasją jest programowanie.
               Głównie zajmuję się front end developmentem przy użyciu Vue. Moim
-              drugim ulubionym językiem jest Python w którym piszę między innymi
-              API, AI (chociażby ten projekt). w wolnym czasie lubię majserkować
-              i zajmowac się prostą elektorniką. Mama trzy psy i jednego kota.
+              drugim ulubionym językiem jest Python, w którym piszę między
+              innymi API, AI (chociażby ten projekt). W wolnym czasie lubię
+              majserkować i zajmowac się prostą elektorniką. Mam trzy psy i
+              jednego kota.
             </p>
           </article>
         </div>
@@ -42,15 +43,15 @@
           <img src="../assets/zuzanna.png" alt="" />
           <article>
             <header>
-              <h3>Zuzanna spychalska</h3>
+              <h3>Zuzanna Spychalska</h3>
               <hr class="line" />
             </header>
             <p>
-              Jestem uczennicom klasy trzeciej o profilu informatyk. Interesuje
+              Jestem uczennicą klasy trzeciej o profilu informatyk. Interesuje
               się programowaniem w języku Python, C#, C++ oraz tworzeniem stron
               internetowych od strony wizualnej. Moją pasją jest również
-              majsterkowanie oraz stolarstwo, w wolnych chwilach siedzę w
-              warsztacie lub składam LEGO oraz układam puzzle. Trenuje
+              majsterkowanie oraz stolarstwo. W wolnych chwilach siedzę w
+              warsztacie lub składam LEGO oraz układam puzzle. Trenuję
               rolkarstwo szybkie oraz bardzo lubię bawić się z moimi
               zwierzętami.
             </p>
