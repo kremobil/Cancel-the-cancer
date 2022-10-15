@@ -17,7 +17,7 @@
     </router-view>
     <footer>
       <h3>
-        Wiktor Fajkowski &copy; 2022 | Modelprzygotowany na konkurs
+        Wiktor Fajkowski &copy; 2022 | Model przygotowany na konkurs
         <a href="https://ai4youth.edu.pl/" target="_blank"
           >AI&nbsp;for&nbsp;youth</a
         >
@@ -108,7 +108,6 @@ nav {
   }
   img {
     width: 50%;
-    max-height: 9vh;
   }
   header {
     flex: 2 1 61rem;

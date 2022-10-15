@@ -52,10 +52,10 @@
         nowotworowych skóry i zapobiegać ich rozwojowi. Rak jest to śmiertelna
         choroba, która atakuje niespodziewanie. Rocznie ok. 100tys. ludzi umiera
         na tę okropną chorobę. Dzięki wczesnemu wykrywaniu niebezpiecznych
-        znamion mamy znacznie większe szanse na jego wyleczenie. Planujemy, aby
-        każdy mógł sprawdzić czy jego zmiany skórne stanową zagrożenie, i w
-        razie potrzeby podjął leczenie, bądź skonsultował się z lekarzem
-        dermatologiem lub onkologiem.
+        znamion mamy znacznie większe szanse na wyleczenie. Planujemy, aby każdy
+        mógł sprawdzić czy jego zmiany skórne stanową zagrożenie, i w razie
+        potrzeby podjął leczenie, bądź skonsultował się z lekarzem dermatologiem
+        lub onkologiem.
       </h2>
     </section>
   </div>
