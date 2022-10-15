@@ -108,6 +108,7 @@ nav {
   }
   img {
     width: 50%;
+    max-height: 9vh;
   }
   header {
     flex: 2 1 61rem;
