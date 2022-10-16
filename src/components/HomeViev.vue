@@ -36,7 +36,7 @@
         wykonanych w profesjonalnych warunkach. Z tego też powodu wyniki modelu
         na zdjęciach robionych w warunkach domowych mogą być gorsze. Mimo
         wszystko w przyszłości zamierzamy ulepszać nasz projekt, aby każdy mógł
-        sprawdzić swoje zmiany skórne na codzień. Należy jednak pamiętać, że
+        sprawdzić swoje zmiany skórne na co dzień. Należy jednak pamiętać, że
         wciąż ważne są kontrole naszych zmian skórnych u dermatologa.
       </h2>
       <a href="" target="_blank">
