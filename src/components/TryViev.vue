@@ -3,19 +3,16 @@
     <div class="cointainer">
       <h1>Krok 1</h1>
       <div class="progressBar">
-        <svg width="451" height="25" viewBox="0 0 451 25" fill="none"
-          xmlns="http://www.w3.org/2000/svg">
-          <g id="bar">
-            <line id="line1" x1="14" y1="12" x2="226" y2="12" stroke="white" stroke-width="6" />
-            <line id="line2" x1="227" y1="12" x2="439" y2="12" stroke="white" stroke-width="6" />
-            <circle id="circle1" cx="12.5" cy="12.5" r="12.5" fill="#FE6152" />
-            <circle id="circle3" cx="438.5" cy="12.5" r="12.5" fill="white" />
-            <circle id="circle2" cx="226.5" cy="12.5" r="12.5" fill="white" />
-          </g>
-        </svg>
+        <div class="line">
+          <div class="fill"
+            :style='{ width: this.stage == 1 ? "0%" : this.stage == 2 ? "50%" : "100%" }'></div>
+          <div class="circle c1"></div>
+          <div class="circle c2" :class='{ active: this.stage >= 2 }'></div>
+          <div class="circle c3" :class='{ active: this.stage == 3 }'></div>
+        </div>
       </div>
     </div>
-    <div class="check">
+    <div class="check" v-if='this.stage == 1'>
       <svg width="400" height="" viewBox="0 0 135 207" fill="none"
         xmlns="http://www.w3.org/2000/svg" class='image'>
         <path d="M91.719 92.2426H51.043V137.79H91.719V92.2426Z" fill="#CCCCCC" />
@@ -107,26 +104,28 @@
         <img src="../assets/Undraw_board.svg" alt="Zdjęcie">
         <h2>Szybko i sprawnie sprawdź swoje znamiona by spać w spokoju o swoje zdrowie</h2>
         <label for='btn'>Prześlij zdjęcie znamienia</label>
-        <input type="file" accept="image/*" capture @change="takePhoto" id='btn' name='btn'>
+        <input type="file" accept="image/*" capture @change="changeProgress(2)" id='btn'
+          name='btn'>
       </div>
     </div>
-
+    <div class="cropImage" v-else-if='this.stage == 2'>
+      <button class="next" @click='changeProgress(3)'>Wytnij</button>
+      <button class="back" @click='changeProgress(1)'>Cofnij</button>
+    </div>
   </div>
 </template>
 <script>
-import router from '@/router'
-
 export default {
-  mounted() {
-    let btn = document.querySelector('#btn')
-    let l1 = document.querySelector('#line1')
-    let c2 = document.querySelector('#circle2')
-
-    btn.addEventListener('click', () => c2.style.fill = '#FE6152')
-    btn.addEventListener('click', () => l1.style.stroke = '#FE6152')
-    btn.addEventListener('click', () => router.push('image'))
-  }
-
+  methods: {
+    changeProgress(stage) {
+      this.stage = stage
+    },
+  },
+  data() {
+    return {
+      stage: 1,
+    }
+  },
 }
 </script>
 <style lang="scss" scoped>
@@ -211,6 +210,59 @@ html {
 
   #btn {
     display: none;
+  }
+}
+
+.line {
+  width: 400px;
+  height: 6px;
+  position: relative;
+  background: white;
+
+  .circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+
+  .c1 {
+    background: #fe6152;
+  }
+
+  .c2 {
+    left: calc(50% - 15px);
+  }
+
+  .c3 {
+    right: 0;
+  }
+
+  .fill {
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background: #fe6152;
+    content: '';
+    transition: width 1s linear;
+  }
+
+  .active {
+    animation: active .5s 1s ease-in-out forwards;
+  }
+
+  @keyframes active {
+    from {
+      background: #ffffff;
+    }
+
+    to {
+      background: #fe6152;
+    }
   }
 }
 </style>
