@@ -108,13 +108,25 @@
           name='btn'>
       </div>
     </div>
-    <div class="cropImage" v-else-if='this.stage == 2'>
-      <button class="next" @click='changeProgress(3)'>Wytnij</button>
-      <button class="back" @click='changeProgress(1)'>Cofnij</button>
+    <div class="cropImage" v-show='this.stage == 2'>
+      <div class="cropAll">
+        <h2>Przytnij swoje zdjęcie żeby na środku było twoje znamie</h2>
+        <div class="markCointainer">
+          <img id="chosenImage">
+        </div>
+        <div class="moveTo">
+          <button class="next" @click='changeProgress(3)'>Wytnij</button>
+          <button class="back" @click='changeProgress(1)'>Cofnij</button>
+        </div>
+      </div>
+    </div>
+    <div class="markResoult" v-show='this.stage == 3'>
+      <img src='' id="output">
     </div>
   </div>
 </template>
 <script>
+import Cropper from 'cropperjs';
 export default {
   methods: {
     changeProgress(stage) {
@@ -125,6 +137,32 @@ export default {
     return {
       stage: 1,
     }
+  },
+  mounted() {
+    let btn = document.querySelector('#btn');
+    let chosenImage = document.querySelector('#chosenImage');
+
+    btn.onchange = () => {
+      let reader = new FileReader();
+      reader.readAsDataURL(btn.files[0]);
+      console.log(btn.files[0]);
+      reader.onload = () => {
+        chosenImage.setAttribute("src", reader.result);
+
+        const cropper = new Cropper(chosenImage, {
+          aspectRatio: 1,
+          viewMode: 2,
+          zoomable: false,
+          scalable: false,
+        });
+
+        document.querySelector('.next').addEventListener('click', function () {
+          let croppedImage = cropper.getCroppedCanvas({ width: 256, height: 256 }).toDataURL("image/png");
+
+          document.querySelector('#output').src = croppedImage;
+        });
+      }
+    };
   },
 }
 </script>
@@ -264,5 +302,43 @@ html {
       background: #fe6152;
     }
   }
+}
+
+.cropAll {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .markCointainer {
+    width: fit-content;
+    height: fit-content;
+    border: 4px solid #fe6152;
+    margin: 4rem;
+  }
+
+  .moveTo {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+    button {
+      margin: 0 2rem;
+    }
+  }
+
+  #chosenImage {
+    display: block;
+    height: 600px;
+    width: 600px;
+  }
+}
+
+#output {
+  display: block;
+  width: 256px;
+  height: 256px;
+  max-width: 100%;
+  max-height: 100%;
 }
 </style>
