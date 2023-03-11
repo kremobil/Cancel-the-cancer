@@ -144,7 +144,7 @@ export default {
       this.stage = stage
 
       if (stage == 1) {
-        window.location.reload(false);
+        window.location.reload(true);
       }
     },
 
