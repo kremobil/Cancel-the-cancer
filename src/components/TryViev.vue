@@ -108,7 +108,7 @@
           name='btn'>
       </div>
     </div>
-    <div class="cropImage" v-if='this.stage == 2'>
+    <div class="cropImage" v-else-if='this.stage == 2'>
       <div class="cropAll">
         <h2>Przytnij swoje zdjęcie żeby na środku było twoje znamie</h2>
         <div class="markCointainer">
@@ -120,7 +120,7 @@
         </div>
       </div>
     </div>
-    <div class="markResoult" v-show='this.stage == 3'>
+    <div class="markResoult" v-else-if='this.stage == 3'>
       <img src='' id="output">
     </div>
   </div>
