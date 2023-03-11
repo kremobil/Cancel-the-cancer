@@ -1,7 +1,7 @@
 <template lang="html">
   <div class='wrapper'>
     <div class="cointainer">
-      <h1>Krok 1</h1>
+      <h1>Krok {{ stage }}</h1>
       <div class="progressBar">
         <div class="line">
           <div class="fill"
@@ -331,8 +331,8 @@ html {
   }
 
   #chosenImage {
-    height: 600px;
-    width: 600px;
+    height: 512px;
+    width: 512px;
   }
 }
 
