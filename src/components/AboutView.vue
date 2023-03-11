@@ -64,20 +64,19 @@
           </article>
         </div>
         <div class="card">
-          <img src="../assets/zuzanna.png" alt="" />
+          <img src="../assets/mateusz.png" alt="" />
           <article>
             <header>
-              <h3>Zuzanna Spychalska</h3>
+              <h3>Mateusz Tochewski</h3>
               <hr class="line" />
             </header>
             <p>
-              Jestem uczennicą klasy trzeciej o profilu informatyk. Interesuje
-              się programowaniem w języku Python, C#, C++ oraz tworzeniem stron
-              internetowych od strony wizualnej. Moją pasją jest również
-              majsterkowanie oraz stolarstwo. W wolnych chwilach siedzę w
-              warsztacie lub składam LEGO oraz układam puzzle. Trenuję
-              rolkarstwo szybkie oraz bardzo lubię bawić się z moimi
-              zwierzętami.
+              Jestem uczniem klasy drugiej technikum o profilu programista. Wybrałem
+              programowanie ze względu na to, że lubię tworzyć a ono pozwala mi właśnie na to w
+              bardzo ciekawy sposób, a poza tym daje mi ogromną satysfakcję. W wolnym czasie
+              rysuje, tworze gry i inne raczej proste programy, głównie w języku Python. Lubę
+              pogłębiać swoją wiedzę z zakresu programowania a ten projekt jest na to idealną
+              szansą.
             </p>
           </article>
         </div>
