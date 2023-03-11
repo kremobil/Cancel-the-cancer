@@ -104,11 +104,11 @@
         <img src="../assets/Undraw_board.svg" alt="Zdjęcie">
         <h2>Szybko i sprawnie sprawdź swoje znamiona by spać w spokoju o swoje zdrowie</h2>
         <label for='btn'>Prześlij zdjęcie znamienia</label>
-        <input type="file" accept="image/*" capture @change="changeProgress(2), cropImg($event)"
-          id='btn' name='btn'>
+        <input type="file" accept="image/*" capture @change="cropImg($event)" id='btn'
+          name='btn'>
       </div>
     </div>
-    <div class="cropImage" v-show='this.stage == 2'>
+    <div class="cropImage" v-if='this.stage == 2'>
       <div class="cropAll">
         <h2>Przytnij swoje zdjęcie żeby na środku było twoje znamie</h2>
         <div class="markCointainer">
@@ -134,25 +134,30 @@ export default {
     },
 
     cropImg(input) {
-      let chosenImage = document.querySelector('#chosenImage');
       let reader = new FileReader();
       reader.readAsDataURL(input.target.files[0]);
       console.log(input.target.files[0]);
       reader.onload = () => {
-        chosenImage.setAttribute("src", reader.result);
+        this.changeProgress(2);
+        setTimeout(() => {
 
-        const cropper = new Cropper(chosenImage, {
-          aspectRatio: 1,
-          viewMode: 2,
-          zoomable: false,
-          scalable: false,
-        });
+          let chosenImage = document.querySelector('#chosenImage');
+          chosenImage.setAttribute("src", reader.result);
 
-        document.querySelector('.next').addEventListener('click', function () {
-          let croppedImage = cropper.getCroppedCanvas({ width: 256, height: 256 }).toDataURL("image/png");
+          const cropper = new Cropper(chosenImage, {
+            aspectRatio: 1,
+            viewMode: 2,
+            zoomable: false,
+            scalable: false,
+          });
 
-          document.querySelector('#output').src = croppedImage;
-        });
+          document.querySelector('.next').addEventListener('click', function () {
+            let croppedImage = cropper.getCroppedCanvas({ width: 256, height: 256 }).toDataURL("image/png");
+
+            document.querySelector('#output').src = croppedImage;
+          });
+
+        }, 5);
       }
     },
   },
@@ -325,7 +330,6 @@ html {
   }
 
   #chosenImage {
-    display: block;
     height: 600px;
     width: 600px;
   }
