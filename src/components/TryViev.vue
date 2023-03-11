@@ -160,6 +160,7 @@ export default {
             viewMode: 2,
             zoomable: false,
             scalable: false,
+            responsive: false,
           });
 
           document.querySelector('.next').addEventListener('click', function () {
