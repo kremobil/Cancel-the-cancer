@@ -17,7 +17,7 @@
     </router-view>
     <footer>
       <h3>
-        Wiktor Fajkowski &copy; 2022 | Model przygotowany na konkurs
+        Wiktor Fajkowski i Paweł Gołata &copy; 2022 | Model przygotowany na konkurs
         <a href="https://ai4youth.edu.pl/" target="_blank">AI&nbsp;for&nbsp;youth</a>
       </h3>
     </footer>
@@ -99,8 +99,6 @@ button {
   transition-property: background-color, box-shadow;
   transition-duration: 0.5s;
   cursor: pointer;
-
-  span {}
 
   &:hover {
     box-shadow: (1rem 0.8rem rgba($color: #fff, $alpha: 0.1)),
