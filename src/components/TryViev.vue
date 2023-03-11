@@ -155,6 +155,7 @@ export default {
             let croppedImage = cropper.getCroppedCanvas({ width: 256, height: 256 }).toDataURL("image/png");
 
             document.querySelector('#output').src = croppedImage;
+            alert('Ta strona jest w rozwoju i funkcja sprawdzajacą twoję znamię niedługo bedzie wprowadzona')
           });
 
         }, 5);

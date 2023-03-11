@@ -28,12 +28,15 @@
               <hr class="line" />
             </header>
             <p>
-              Jestem uczniem klasy 2 technikum, moją pasją jest programowanie.
-              Głównie zajmuję się front end developmentem przy użyciu Vue. Moim
-              drugim ulubionym językiem jest Python, w którym piszę między
-              innymi API, AI (chociażby ten projekt). W wolnym czasie lubię
-              majserkować i zajmowac się prostą elektorniką. Mam trzy psy i
-              jednego kota.
+              Jestem uczniem klasy drugiej technikum i bardzo pasjonuję się programowaniem.
+              Skupiam się głównie na front end developmentzie z wykorzystaniem frameworka Vue.
+              Moim drugim ulubionym językiem programowania jest Python, który wykorzystuję do
+              tworzenia różnego rodzaju API oraz do projektowania sztucznej inteligencji, jak
+              choćby ten projekt.
+              W wolnym czasie lubię majsterkować i eksperymentować z prostą elektroniką. Mam trzy
+              psy i jednego kota, co daje mi wiele radości i pozytywnej energii. Programowanie to
+              dla mnie pasja i jestem bardzo zadowolony, że mogę rozwijać swoje umiejętności w
+              tej dziedzinie.
             </p>
           </article>
         </div>
@@ -45,8 +48,9 @@
               <hr class="line" />
             </header>
             <p>
-              Jestem Paweł i moim hobby jest tworzenie stron internetowych w frameworku Vue.
-              Uwielbiam projektować i tworzyć interaktywne i estetyczne strony internetowe, które
+              Jestem Paweł, moim hobby jest tworzenie stron internetowych w
+              frameworku Vue.
+              Uwielbiam projektować estetyczne strony internetowe, które
               są łatwe w obsłudze i dostarczają użytkownikom wartościowe treści.
               Poza Vue, moim drugim ulubionym językiem programowania jest Python. Uwielbiam jego
               prostotę i wszechstronność. Interesuję się również drukiem 3D i nowinkami
