@@ -104,8 +104,8 @@
         <img src="../assets/Undraw_board.svg" alt="Zdjęcie">
         <h2>Szybko i sprawnie sprawdź swoje znamiona by spać w spokoju o swoje zdrowie</h2>
         <label for='btn'>Prześlij zdjęcie znamienia</label>
-        <input type="file" accept="image/*" capture @change="changeProgress(2)" id='btn'
-          name='btn'>
+        <input type="file" accept="image/*" capture @change="changeProgress(2), cropImg($event)"
+          id='btn' name='btn'>
       </div>
     </div>
     <div class="cropImage" v-show='this.stage == 2'>
@@ -132,20 +132,12 @@ export default {
     changeProgress(stage) {
       this.stage = stage
     },
-  },
-  data() {
-    return {
-      stage: 1,
-    }
-  },
-  mounted() {
-    let btn = document.querySelector('#btn');
-    let chosenImage = document.querySelector('#chosenImage');
 
-    btn.onchange = () => {
+    cropImg(input) {
+      let chosenImage = document.querySelector('#chosenImage');
       let reader = new FileReader();
-      reader.readAsDataURL(btn.files[0]);
-      console.log(btn.files[0]);
+      reader.readAsDataURL(input.target.files[0]);
+      console.log(input.target.files[0]);
       reader.onload = () => {
         chosenImage.setAttribute("src", reader.result);
 
@@ -162,7 +154,12 @@ export default {
           document.querySelector('#output').src = croppedImage;
         });
       }
-    };
+    },
+  },
+  data() {
+    return {
+      stage: 1,
+    }
   },
 }
 </script>
