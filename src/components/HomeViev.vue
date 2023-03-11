@@ -84,8 +84,6 @@ a {
   transition-duration: 0.5s;
   cursor: pointer;
 
-  span {}
-
   &:hover {
     box-shadow: (1rem 0.8rem rgba($color: #fff, $alpha: 0.1)),
       (2rem 1.6rem rgba($color: #fff, $alpha: 0.03)),
