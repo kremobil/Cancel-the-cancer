@@ -121,7 +121,18 @@
       </div>
     </div>
     <div class="markResoult" v-else-if='this.stage == 3'>
-      <img src='' id="output">
+      <div class="score">
+        <div class="rs">
+          <h1>Twój wynik to ...</h1>
+          <h2>
+            Nasze Ai wykryło że .. jednak pamiętaj że zawsze może się pomylić dlatego warto iść
+            do
+            lekarza oraz na regularne wizyty
+          </h2>
+        </div>
+        <button @click='changeProgress(1)'>Sprawdz swoje znamię</button>
+        <img src='' id="output">
+      </div>
     </div>
   </div>
 </template>
@@ -342,5 +353,30 @@ html {
   height: 256px;
   max-width: 100%;
   max-height: 100%;
+}
+
+.score {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: 4rem;
+
+  .rs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+      width: 60%;
+      margin: 4rem 0;
+      text-align: center;
+    }
+  }
+
+  button {
+    margin: 4rem;
+  }
 }
 </style>
