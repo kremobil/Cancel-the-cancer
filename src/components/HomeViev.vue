@@ -23,14 +23,15 @@
     <section id="who">
       <h1>Dla kogo jest ten projekt?</h1>
       <h2>
-        Projekt jest przeznaczony dla wszystkich osób, które chcą sprawdzić swoje znamię skórne i
+        Projekt jest przeznaczony dla wszystkich osób, które chcą sprawdzić swoje znamię i
         zidentyfikować, czy może ono stanowić zagrożenie dla zdrowia. Może on być szczególnie
-        przydatny dla osób, które obawiają się, że ich zmiana skórna może być nowotworem lub
-        które chcą zwiększyć świadomość swojego stanu zdrowia skóry. Projekt ten jest skierowany
-        do osób w każdym wieku i płci, a jego celem jest ułatwienie diagnozowania chorób skóry,
-        takich jak czerniak, poprzez wykorzystanie sztucznej inteligencji do analizowania zdjęć
-        znamię skórnego. Jednocześnie projekt ma na celu zwiększenie świadomości o konieczności
-        regularnych wizyt kontrolnych u dermatologa w celu wczesnego wykrycia i leczenia zmian
+        przydatny dla osób, które obawiają się, że ich zmiana skórna może być objawem nowotworu
+        lub które chcą zwiększyć świadomość swojego stanu zdrowia skóry. Projekt ten jest
+        skierowany do osób w każdym wieku i płci, a jego celem jest przyśpieszenie diagnozowania
+        chorób skóry, takich jak czerniak, poprzez wykorzystanie sztucznej inteligencji do
+        analizowania zdjęć znamion skórnych. Jednocześnie projekt ma na celu zwiększenie
+        świadomości o konieczności regularnych wizyt kontrolnych u dermatologa w celu zwiększenia
+        skuteczności leczenia poprzez szybsze wykrycie potencjalnie niebezpiecznych zmian
         skórnych.
       </h2>
       <router-link to="/try">Sprawdź swoje znamiona</router-link>
