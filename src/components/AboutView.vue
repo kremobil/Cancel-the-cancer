@@ -28,13 +28,14 @@
               <hr class="line" />
             </header>
             <p>
-              Jestem uczniem klasy drugiej technikum i bardzo pasjonuję się programowaniem.
-              Skupiam się głównie na front end developmentzie z wykorzystaniem frameworka Vue.
+              Jestem uczniem klasy drugiej technikum i pasjonuję się programowaniem.
+              Skupiam się głównie na front end developmentcie z wykorzystaniem frameworka Vue.
               Moim drugim ulubionym językiem programowania jest Python, który wykorzystuję do
               tworzenia różnego rodzaju API oraz do projektowania sztucznej inteligencji, jak
-              choćby ten projekt.
+              chociażby ten projekt.
               W wolnym czasie lubię majsterkować i eksperymentować z prostą elektroniką. Mam trzy
-              psy i jednego kota, co daje mi wiele radości i pozytywnej energii. Programowanie to
+              psy i jednego kota, które dają mi mi wiele radości i pozytywnej energii.
+              Programowanie to
               dla mnie pasja i jestem bardzo zadowolony, że mogę rozwijać swoje umiejętności w
               tej dziedzinie.
             </p>
@@ -74,7 +75,7 @@
               Jestem uczniem klasy drugiej technikum o profilu programista. Wybrałem
               programowanie ze względu na to, że lubię tworzyć a ono pozwala mi właśnie na to w
               bardzo ciekawy sposób, a poza tym daje mi ogromną satysfakcję. W wolnym czasie
-              rysuje, tworze gry i inne raczej proste programy, głównie w języku Python. Lubę
+              rysuje, tworze gry i inne raczej proste programy, głównie w języku Python. Lubię
               pogłębiać swoją wiedzę z zakresu programowania a ten projekt jest na to idealną
               szansą.
             </p>
