@@ -209,6 +209,26 @@ html {
   justify-content: center;
   flex-direction: column;
   max-width: 100%;
+
+  h1 {
+    margin: 0.8rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    h1 {
+      margin: 3rem;
+    }
+
+    .line {
+      width: 325px;
+      height: 6px;
+    }
+
+    .circle {
+      width: 10px;
+      height: 10px;
+    }
+  }
 }
 
 .check {
@@ -349,6 +369,11 @@ html {
   #chosenImage {
     height: 512px;
     width: 512px;
+
+    @media (max-width: 768px) {
+      height: 312px;
+      width: 312px;
+    }
   }
 }
 
