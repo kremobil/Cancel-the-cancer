@@ -17,8 +17,7 @@
     </router-view>
     <footer>
       <h3>
-        Wiktor Fajkowski i Paweł Gołata &copy; 2023 | Model przygotowany na konkurs
-        <a href="https://ai4youth.edu.pl/" target="_blank">AI&nbsp;for&nbsp;youth</a>
+        Cancel the cancer 2023 &copy; wykonali Wiktor Fajkowski i Paweł Gołata
       </h3>
     </footer>
   </div>
