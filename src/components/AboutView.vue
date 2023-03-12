@@ -129,6 +129,7 @@ export default {};
       width: 100%;
       object-fit: cover;
       border-bottom: 0.3rem solid #fe6152;
+      user-select: none;
     }
 
     article {
