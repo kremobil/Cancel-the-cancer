@@ -104,8 +104,7 @@
         <img src="../assets/Undraw_board.svg" alt="Zdjęcie">
         <h2>Szybko i sprawnie sprawdź swoje znamiona by spać w spokoju o swoje zdrowie</h2>
         <label for='btn'>Prześlij zdjęcie znamienia</label>
-        <input type="file" accept="image/*" capture @change="cropImg($event)" id='btn'
-          name='btn'>
+        <input type="file" accept="image/*" @change="cropImg($event)" id='btn' name='btn'>
       </div>
     </div>
     <div class="cropImage" v-else-if='this.stage == 2'>
