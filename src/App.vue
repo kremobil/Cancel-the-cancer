@@ -17,7 +17,7 @@
     </router-view>
     <footer>
       <h3>
-        Wiktor Fajkowski i Paweł Gołata &copy; 2022 | Model przygotowany na konkurs
+        Wiktor Fajkowski i Paweł Gołata &copy; 2023 | Model przygotowany na konkurs
         <a href="https://ai4youth.edu.pl/" target="_blank">AI&nbsp;for&nbsp;youth</a>
       </h3>
     </footer>
