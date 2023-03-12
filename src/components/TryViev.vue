@@ -101,7 +101,7 @@
           fill="#E6E6E6" />
       </svg>
       <div class="main">
-        <img src="../assets/Undraw_board.svg" alt="Zdjęcie">
+        <img src="../assets/Undraw_board.svg" alt="Zdjęcie" id='board'>
         <h2>Szybko i sprawnie sprawdź swoje znamiona by spać w spokoju o swoje zdrowie</h2>
         <label for='btn'>Prześlij zdjęcie znamienia</label>
         <input type="file" accept="image/*" @change="cropImg($event)" id='btn' name='btn'>
@@ -241,6 +241,8 @@ html {
   }
 
   @media screen and (max-width: 768px) {
+    align-items: center;
+    flex-direction: column;
     width: 95%;
   }
 
@@ -259,6 +261,12 @@ html {
   flex-direction: column;
   width: 55%;
   height: 100%;
+
+  @media screen and (max-width: 768px) {
+    #board {
+      display: none;
+    }
+  }
 
   h2 {
     width: 100%;
