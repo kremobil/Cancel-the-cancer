@@ -67,7 +67,7 @@
           <img src="../assets/mateusz.png" alt="" />
           <article>
             <header>
-              <h3>Mateusz Tochewski</h3>
+              <h3>Mateusz Torzewski</h3>
               <hr class="line" />
             </header>
             <p>
