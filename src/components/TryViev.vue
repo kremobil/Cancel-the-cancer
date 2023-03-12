@@ -129,7 +129,7 @@
             lekarza oraz na regularne wizyty
           </h2>
         </div>
-        <button @click='changeProgress(1)'>Sprawdz swoje znamię</button>
+        <button @click='changeProgress(1)'>sprawdź kolejne znamię</button>
         <img src='' id="output">
       </div>
     </div>
