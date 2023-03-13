@@ -141,10 +141,6 @@ export default {
   methods: {
     changeProgress(stage) {
       this.stage = stage
-
-      if (stage == 1) {
-        window.location.reload(true);
-      }
     },
 
     cropImg(input) {
