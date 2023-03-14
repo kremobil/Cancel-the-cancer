@@ -122,9 +122,9 @@
     <div class="markResoult" v-else-if='this.stage == 3'>
       <div class="score">
         <div class="rs">
-          <h1>Twój wynik to ...</h1>
+          <h1>Twój wynik to {{probability}}</h1>
           <h2>
-            Nasze Ai wykryło że .. jednak pamiętaj że zawsze może się pomylić dlatego warto iść
+            Nasze Ai wykryło że to {{ result }} jednak pamiętaj że zawsze może się pomylić dlatego warto iść
             do
             lekarza oraz na regularne wizyty
           </h2>
@@ -151,8 +151,11 @@ export default {
       let reader = new FileReader();
       reader.readAsDataURL(input.target.files[0]);
       console.log(input.target.files[0]);
+      const ref = this
       reader.onload = () => {
+
         this.changeProgress(2);
+
         setTimeout(() => {
 
           let chosenImage = document.querySelector('#chosenImage');
@@ -167,21 +170,52 @@ export default {
           });
 
           document.querySelector('.next').addEventListener('click', function () {
-            let croppedImage = cropper.getCroppedCanvas({ width: 256, height: 256 }).toDataURL("image/jpeg");
-
-            document.querySelector('#output').src = croppedImage;
-            alert('Ta strona jest w rozwoju i funkcja sprawdzajacą twoję znamię niedługo bedzie wprowadzona')
+            cropper.getCroppedCanvas({ width: 256, height: 256 }).toBlob((blob) => {
+              let file = new File([blob], "fileName.jpg", { type: "image/jpeg" })
+              ref.getResponse(file)
+            }, 'image/jpeg');
+            document.querySelector('#output').src = cropper.getCroppedCanvas({ width: 256, height: 256 }).toDataURL();
           });
-
         }, 5);
       }
     },
+    getResponse(image) {
+      const ref = this
+      const data = new FormData();
+      data.append('image', image)
+
+      fetch('http://127.0.0.1:5000/predict', {
+        method: "POST",
+        body: data
+      }).then(
+        (response) => {
+          return response.json()
+        }
+      ).then(
+        (data) => {
+          return data.result
+        }
+      ).then(
+        (prediction) => {
+          ref.prediction = prediction
+        }
+      )
+    }
   },
   data() {
     return {
       stage: 1,
+      prediction: 0
     }
   },
+  computed: {
+    result() {
+      return this.prediction > 0.45 ? "rak skóry" : "niegroźne znamię"
+    },
+    probability() {
+      return `${Math.round(this.prediction * 10000) / 100}%`
+    }
+  }
 }
 </script>
 <style lang="scss" scoped>
