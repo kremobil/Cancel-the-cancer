@@ -167,7 +167,7 @@ export default {
           });
 
           document.querySelector('.next').addEventListener('click', function () {
-            let croppedImage = cropper.getCroppedCanvas({ width: 256, height: 256 }).toDataURL("image/jpg");
+            let croppedImage = cropper.getCroppedCanvas({ width: 256, height: 256 }).toDataURL("image/jpeg");
 
             document.querySelector('#output').src = croppedImage;
             alert('Ta strona jest w rozwoju i funkcja sprawdzajacą twoję znamię niedługo bedzie wprowadzona')
