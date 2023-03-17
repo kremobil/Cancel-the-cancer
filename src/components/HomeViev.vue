@@ -260,4 +260,10 @@ a {
     }
   }
 }
+
+.back-deco {
+  @media screen and (max-width: 1000px) {
+    display: none;
+  }
+}
 </style>
