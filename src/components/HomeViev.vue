@@ -262,7 +262,7 @@ a {
 }
 
 .back-deco {
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 810px) {
     display: none;
   }
 }
