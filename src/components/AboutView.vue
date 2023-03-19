@@ -72,12 +72,13 @@
               <hr class="line" />
             </header>
             <p>
-              Jestem uczniem klasy drugiej technikum o profilu programista. Wybrałem
-              programowanie ze względu na to, że lubię tworzyć a ono pozwala mi właśnie na to w
-              bardzo ciekawy sposób, a poza tym daje mi ogromną satysfakcję. W wolnym czasie
-              rysuje, tworze gry i inne raczej proste programy, głównie w języku Python. Lubię
-              pogłębiać swoją wiedzę z zakresu programowania a ten projekt jest na to idealną
-              szansą.
+              Jestem uczniem drugiej klasy technikum o profilu programista. Wybór tej
+              specjalizacji wynika z mojej pasji do tworzenia, a programowanie pozwala mi na
+              rozwijanie tej pasji w bardzo ciekawy sposób. Przyjemność, jaką czerpię z
+              programowania, jest dla mnie nieoceniona. W czasie wolnym uwielbiam rysować oraz
+              tworzyć gry i proste programy w języku Python. Chętnie poszerzam swoją wiedzę z
+              dziedziny programowania i ten projekt jest dla mnie idealnym sposobem na rozwijanie
+              swoich umiejętności.
             </p>
           </article>
         </div>
