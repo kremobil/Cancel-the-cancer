@@ -122,15 +122,20 @@
     <div class="markResoult" v-else-if='this.stage == 3'>
       <div class="score">
         <div class="rs">
-          <h1>Twój wynik to {{probability}}</h1>
+          <h1>Twój wynik to {{ probability }}</h1>
           <h2>
-            Nasze Ai wykryło że to {{ result }} jednak pamiętaj że zawsze może się pomylić dlatego warto iść
+            Nasze Ai wykryło że to {{ result }} jednak pamiętaj że zawsze może się pomylić
+            dlatego warto iść
             do
             lekarza oraz na regularne wizyty
           </h2>
         </div>
         <button @click='changeProgress(1)'>sprawdź kolejne znamię</button>
-        <img src='' id="output">
+        <h2 id='dropText'>Jeśli nasz projekt ci się podoba, wesprzyj nas!</h2>
+        <div style="position: relative; width: 400px; height: 400px; overflow: hidden;"><iframe
+            style="position: absolute; top:0; left: 0; bottom: 0; right: 0; width: 100%; height: 100%;"
+            src="https://zrzutka.pl/m8at69/widget/13" frameborder="0" scrolling="no"></iframe>
+        </div>
       </div>
     </div>
   </div>
@@ -174,7 +179,6 @@ export default {
               let file = new File([blob], "fileName.jpg", { type: "image/jpeg" })
               ref.getResponse(file)
             }, 'image/jpeg');
-            document.querySelector('#output').src = cropper.getCroppedCanvas({ width: 256, height: 256 }).toDataURL();
           });
         }, 5);
       }
@@ -449,5 +453,15 @@ html {
   button {
     margin: 4rem;
   }
+}
+
+iframe {
+  background: white;
+  border-radius: 8px;
+}
+
+#dropText {
+  margin-bottom: 2rem;
+  color: #fe6152;
 }
 </style>
