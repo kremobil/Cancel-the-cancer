@@ -132,7 +132,8 @@
         </div>
         <button @click='changeProgress(1)'>sprawdź kolejne znamię</button>
         <h2 id='dropText'>Jeśli nasz projekt ci się podoba, wesprzyj nas!</h2>
-        <div style="position: relative; width: 400px; height: 400px; overflow: hidden;"><iframe
+        <div style="position: relative; width: 400px; height: 400px; overflow: hidden;"
+          class='frameDrop'><iframe
             style="position: absolute; top:0; left: 0; bottom: 0; right: 0; width: 100%; height: 100%;"
             src="https://zrzutka.pl/m8at69/widget/13" frameborder="0" scrolling="no"></iframe>
         </div>
@@ -463,5 +464,9 @@ iframe {
 #dropText {
   margin-bottom: 2rem;
   color: #fe6152;
+}
+
+.frameDrop {
+  width: 300px !important;
 }
 </style>
