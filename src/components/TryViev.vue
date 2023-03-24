@@ -121,15 +121,23 @@
     </div>
     <div class="markResoult" v-else-if='this.stage == 3'>
       <div class="score">
-        <div class="rs">
-          <h1>Twój wynik to {{ probability }}</h1>
-          <h2>
-            Nasze Ai wykryło że to {{ result }} jednak pamiętaj że zawsze może się pomylić
-            dlatego warto iść
-            do
-            lekarza oraz na regularne wizyty
-          </h2>
-        </div>
+        <Transition name='modelText' mode="out-in">
+          <div class="rs" v-if='this.prediction == 0'>
+            <h1>Trwa sprawdzanie...</h1>
+            <h2>
+              Prosimy o poczekanie aż nasz model sprawdzi twoje znamię.
+            </h2>
+          </div>
+          <div class="rs" v-else>
+            <h1>Twój wynik to {{ probability }}</h1>
+            <h2>
+              Nasze Ai wykryło że to {{ result }} jednak pamiętaj że zawsze może się pomylić
+              dlatego warto iść
+              do
+              lekarza oraz na regularne wizyty
+            </h2>
+          </div>
+        </Transition>
         <button @click='changeProgress(1)'>sprawdź kolejne znamię</button>
         <h2 id='dropText'>Jeśli nasz projekt ci się podoba, wesprzyj nas!</h2>
         <div style="position: relative; width: 400px; height: 400px; overflow: hidden;"
@@ -468,5 +476,27 @@ iframe {
 
 .frameDrop {
   width: 300px !important;
+}
+
+.modelText-enter-active {
+  animation: bounce-in 0.5s;
+}
+
+.modelText-leave-active {
+  animation: bounce-in 0.5s reverse;
+}
+
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 </style>
