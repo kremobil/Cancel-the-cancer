@@ -153,9 +153,11 @@
 import Cropper from 'cropperjs';
 export default {
   beforeRouteLeave(to, from, next) {
-    const cropper = document.querySelector('#chosenImage').cropper;
-    if (cropper) {
-      cropper.destroy();
+    if (this.stage === 2) {
+      const cropper = document.querySelector('#chosenImage').cropper;
+      if (cropper) {
+        cropper.destroy();
+      }
     }
     next();
   },
