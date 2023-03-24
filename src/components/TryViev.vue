@@ -152,6 +152,13 @@
 <script>
 import Cropper from 'cropperjs';
 export default {
+  beforeRouteLeave(to, from, next) {
+    const cropper = document.querySelector('#chosenImage').cropper;
+    if (cropper) {
+      cropper.destroy();
+    }
+    next();
+  },
   methods: {
     changeProgress(stage) {
       this.stage = stage
