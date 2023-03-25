@@ -1,5 +1,16 @@
 <template>
   <div class="app-wrapper">
+    <Transition name='nested'>
+      <div class="cover" v-if="showPopup">
+        <div class="popup-container">
+          <div class="popup-message">
+            <h1>UWAGA!</h1>
+            <h2>{{ message }}</h2>
+            <button @click="togglePopup()">OK</button>
+          </div>
+        </div>
+      </div>
+    </Transition>
     <nav>
       <header>
         <img src="./assets/logo.svg" alt="Cancel the cancer logo" />
@@ -10,7 +21,7 @@
         <router-link to="/try">Przetestuj</router-link>
       </div>
     </nav>
-    <router-view v-slot="{ Component }">
+    <router-view v-slot="{ Component }" @popUP='togglePopup()'>
       <transition name="fade">
         <component :is="Component" />
       </transition>
@@ -22,7 +33,21 @@
     </footer>
   </div>
 </template>
-<script></script>
+<script>
+export default {
+  data() {
+    return {
+      showPopup: false,
+      message: 'Nasz model jest wciąż na etapie testów, dlatego nie należy zbytnio przejmować się wynikami.'
+    }
+  },
+  methods: {
+    togglePopup() {
+      this.showPopup = !this.showPopup;
+    },
+  },
+}
+</script>
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Work+Sans:ital,wght@0,400;0,500;1,600&display=swap');
 
@@ -242,5 +267,70 @@ nav {
 .fade-leave-from {
   transform: scale(1);
   opacity: 1;
+}
+
+.cover {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  .popup-container {
+    width: 750px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #28353b;
+    box-shadow: 2.5px 2.5px 7.5px 2.5px rgba($color: #000, $alpha: 0.5);
+    padding: 20px;
+    z-index: 10000;
+    text-align: center;
+    border-radius: 6px;
+
+    h1 {
+      color: #fe6152;
+    }
+
+    @media screen and (max-width: 1024px) {
+      width: 600px;
+    }
+
+    @media screen and (max-width: 768px) {
+      width: 280px;
+    }
+  }
+
+  .popup-message button {
+    margin-top: 10px;
+  }
+}
+
+.nested-enter-active,
+.nested-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.nested-enter-from,
+.nested-leave-to {
+  opacity: 0;
+}
+
+.nested-enter-active .popup-container,
+.nested-leave-active .popup-container {
+  transition: left 0.5s ease 0.25s, opacity 0.5s ease 0.25s;
+}
+
+.nested-enter-from .popup-container {
+  opacity: 0;
+  left: 25%;
+}
+
+.nested-leave-to .popup-container {
+  opacity: 0;
+  left: 75%;
 }
 </style>

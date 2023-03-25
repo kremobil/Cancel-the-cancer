@@ -114,7 +114,7 @@
           <img id="chosenImage">
         </div>
         <div class="moveTo">
-          <button class="next" @click='changeProgress(3)'>Wytnij</button>
+          <button class="next" @click='changeProgress(3); $emit("popUP")'>Wytnij</button>
           <button class="back" @click='changeProgress(1)'>Cofnij</button>
         </div>
       </div>
@@ -227,7 +227,7 @@ export default {
   data() {
     return {
       stage: 1,
-      prediction: 0
+      prediction: 0,
     }
   },
   computed: {
