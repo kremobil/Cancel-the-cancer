@@ -38,7 +38,7 @@ export default {
   data() {
     return {
       showPopup: false,
-      message: 'Nasz model jest wciąż na etapie testów, dlatego nie należy zbytnio przejmować się wynikami.'
+      message: 'Nasz model jest wciąż na etapie testów, i zbyt często przewiduje groźne znamiona. Dlatego nie należy zbytnio przejmować się wynikami.'
     }
   },
   methods: {
