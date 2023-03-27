@@ -129,7 +129,7 @@
             </h2>
           </div>
           <div class="rs" v-else>
-            <h1>Twój wynik to {{ probability }}</h1>
+            <h1>Model jest pewny w {{ probability }}</h1>
             <h2>
               Nasze Ai wykryło że to {{ result }} jednak pamiętaj że zawsze może się pomylić
               dlatego warto iść
@@ -219,7 +219,9 @@ export default {
         }
       ).then(
         (prediction) => {
-          ref.prediction = prediction
+          console.log(prediction)
+          ref.prediction = prediction[0] > prediction[1] ? prediction[0] - prediction[1] : prediction[1] - prediction[0]
+          ref.result = prediction[0] > prediction[1] ? "niegroźne znamię" : "złośliwe znamię"
         }
       )
     }
@@ -228,12 +230,10 @@ export default {
     return {
       stage: 1,
       prediction: 0,
+      result:'',
     }
   },
   computed: {
-    result() {
-      return this.prediction > 0.45 ? "rak skóry" : "niegroźne znamię"
-    },
     probability() {
       return `${Math.round(this.prediction * 10000) / 100}%`
     }
@@ -460,6 +460,7 @@ html {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
 
     h2 {
       width: 60%;
