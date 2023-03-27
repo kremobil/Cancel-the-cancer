@@ -38,7 +38,7 @@ export default {
   data() {
     return {
       showPopup: false,
-      message: 'Wciąż udoskonalamy nasz model by był jak najdokładniejszy, pamiętaj jednak że nie ma on obecnie dokładność 85% może on się więc czasem pomylić.'
+      message: 'Wciąż udoskonalamy nasz model by był jak najdokładniejszy, pamiętaj jednak że ma on obecnie dokładność 85% może on się więc czasem pomylić.'
     }
   },
   methods: {
