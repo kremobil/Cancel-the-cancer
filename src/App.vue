@@ -30,10 +30,29 @@
       <div class="patreons">
         <h2>Patroni projektu</h2>
         <div class="patreaons-images">
-          <img
-            src="./assets/projekt_realizowany_beztla.png"
-            alt="Projekt realizwany w ramach Zwolnionych z teorii"
-          />
+          <a href="https://zwolnienizteorii.pl/" target="_blank">
+            <img
+              src="./assets/projekt_realizowany_beztla.png"
+              alt="Projekt realizwany w ramach Zwolnionych z teorii"
+            />
+          </a>
+        </div>
+      </div>
+      <div class="socials">
+        <h2>Sprawdź nasze social media</h2>
+        <div class="socials-links">
+          <a href="https://www.instagram.com/cancelthecancerai/" id="ig" target="_blank" title="Sprawdź naszego insta">
+            <!-- image from https://www.flaticon.com/free-icons/instagram-logo -->
+            <img src="./assets/instagram-logo.png" alt="instagram logo image from https://www.flaticon.com/free-icons/instagram-logo">
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=100091365463634" id="fb" target="_blank" title="Zajrzyj na fejsa Cancel the cancer">
+            <!-- image from https://www.flaticon.com/free-icons/facebook -->
+            <img src="./assets/facebook-app-symbol.png" alt="facebook logo image from https://www.flaticon.com/free-icons/facebook">
+          </a>
+          <a href="https://www.youtube.com/@CancelTheCancer" id="yt" target="_blank" title="Zobacz nasz kanał na YT">
+            <!-- image from https://www.flaticon.com/free-icons/youtube -->
+            <img src="./assets/youtube.png" alt="youtube logo image from https://www.flaticon.com/free-icons/youtube">
+          </a>
         </div>
       </div>
       <hr />
@@ -344,7 +363,7 @@ nav {
   opacity: 0;
   left: 75%;
 }
-.patreons {
+.patreons, .socials {
   width: 100%;
   padding: 3rem;
   h2 {
@@ -357,10 +376,50 @@ nav {
     display: flex;
     align-items: stretch;
     justify-content: center;
-    img {
-      margin: 0 2rem;
+    a{
+      width: 300px;
+      height: 150px;
       background-color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 2rem;
       border-radius: 1rem;
+      img {
+        max-height: 90%;
+        max-width: 90%;
+        object-fit: cover;
+      }
+    }
+    
+  }
+  .socials-links{
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    a{
+      width: 75px;
+      height: 75px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      border-radius: 50%;
+      margin: 0 1.5rem;
+      &#ig{
+        background:linear-gradient(45deg, #f1a900, #f24d1a, #f20077, #7a09ef);
+      }
+      &#fb{
+        background: #395495;
+      }
+      &#yt{
+        background: #ff0000;
+      }
+      img{
+        width: 60%;
+        height: 60%;
+        object-fit: cover;
+      }
     }
   }
 }
