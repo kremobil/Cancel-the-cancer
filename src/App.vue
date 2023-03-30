@@ -1,6 +1,6 @@
 <template>
   <div class="app-wrapper">
-    <Transition name='nested'>
+    <Transition name="nested">
       <div class="cover" v-if="showPopup">
         <div class="popup-container">
           <div class="popup-message">
@@ -21,12 +21,22 @@
         <router-link to="/try">Przetestuj</router-link>
       </div>
     </nav>
-    <router-view v-slot="{ Component }" @popUP='togglePopup()'>
+    <router-view v-slot="{ Component }" @popUP="togglePopup()">
       <transition name="fade">
         <component :is="Component" />
       </transition>
     </router-view>
     <footer>
+      <div class="patreons">
+        <h2>Patroni projektu</h2>
+        <div class="patreaons-images">
+          <img
+            src="./assets/projekt_realizowany_beztla.png"
+            alt="Projekt realizwany w ramach Zwolnionych z teorii"
+          />
+        </div>
+      </div>
+      <hr />
       <h3>
         Cancel the cancer 2023 &copy; wykonali Wiktor Fajkowski i Paweł Gołata
       </h3>
@@ -38,15 +48,16 @@ export default {
   data() {
     return {
       showPopup: false,
-      message: 'Wciąż udoskonalamy nasz model by był jak najdokładniejszy, pamiętaj jednak że ma on obecnie dokładność 85% może on się więc czasem pomylić.'
-    }
+      message:
+        'Wciąż udoskonalamy nasz model by był jak najdokładniejszy, pamiętaj jednak że ma on obecnie dokładność 85% może on się więc czasem pomylić.',
+    };
   },
   methods: {
     togglePopup() {
       this.showPopup = !this.showPopup;
     },
   },
-}
+};
 </script>
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Work+Sans:ital,wght@0,400;0,500;1,600&display=swap');
@@ -91,11 +102,11 @@ html {
 footer {
   margin-top: 5rem;
   width: 100%;
-  padding: 3rem;
   text-align: center;
 
   h3 {
     font-size: 2.8rem;
+    padding: 3rem;
 
     a {
       color: #fe6152;
@@ -244,8 +255,8 @@ nav {
   transform: scale(0);
 }
 
-.fade-enter-active~footer,
-.fade-leave-active~footer {
+.fade-enter-active ~ footer,
+.fade-leave-active ~ footer {
   display: none;
 }
 
@@ -332,5 +343,25 @@ nav {
 .nested-leave-to .popup-container {
   opacity: 0;
   left: 75%;
+}
+.patreons {
+  width: 100%;
+  padding: 3rem;
+  h2 {
+    padding-bottom: 2rem;
+    color: #fff;
+  }
+  .patreaons-images {
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    img {
+      margin: 0 2rem;
+      background-color: #fff;
+      border-radius: 1rem;
+    }
+  }
 }
 </style>
