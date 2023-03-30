@@ -50,16 +50,15 @@
             </header>
             <p>
               Jestem Paweł, moim hobby jest tworzenie stron internetowych w
-              frameworku Vue.
-              Uwielbiam projektować estetyczne strony internetowe, które
+              frameworku Vue, które
               są łatwe w obsłudze i dostarczają użytkownikom wartościowe treści.
-              Poza Vue, moim drugim ulubionym językiem programowania jest Python. Uwielbiam jego
+              Poza Vue, moim drugim ulubionym językiem programowania jest Python. Doceniam jego
               prostotę i wszechstronność. Interesuję się również drukiem 3D i nowinkami
               technologicznymi. Fascynuje mnie, jak
               nowoczesne technologie mogą wpłynąć na nasze życie i jak można je wykorzystać do
               rozwiązywania problemów w różnych dziedzinach.
               Poza pracą nad projektami informatycznymi, lubię spotykać się z przyjaciółmi. Cenię
-              sobie dobre relacje z innymi ludźmi i uważam, że czas spędzony z przyjaciółmi jest
+              sobie dobre relacje z innymi ludźmi i uważam, że czas spędzony z bliskimi jest
               niezwykle ważny.
             </p>
           </article>
