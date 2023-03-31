@@ -376,12 +376,17 @@ nav {
     padding-bottom: 2rem;
     color: #fff;
   }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   .patreaons-images {
-    width: 100%;
-    height: 15vh;
-    display: flex;
-    align-items: stretch;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    gap: 2rem;
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 300px;
+    }
     a{
       width: 300px;
       height: 150px;
@@ -389,7 +394,6 @@ nav {
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0 2rem;
       border-radius: 1rem;
       img {
         max-height: 90%;
