@@ -36,6 +36,12 @@
               alt="Projekt realizwany w ramach Zwolnionych z teorii"
             />
           </a>
+          <a href="https://www.youtube.com/@Pasjainformatyki" target="_blank">
+            <img
+              src="./assets/pasja_informatyki_logo_final_1000x1000px.png"
+              alt="Pasja informatyki"
+            />
+          </a>
         </div>
       </div>
       <div class="socials">
