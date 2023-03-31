@@ -129,7 +129,9 @@
             </h2>
           </div>
           <div class="rs" v-else>
-            <h1>Model jest pewny w {{ probability }}</h1>
+            <h1>Model jest pewny w {{ probability }}<span class="material-symbols-outlined help-sign" @click="$emit('explainResult', pred_array[0], pred_array[1], prediction)">
+              help
+              </span></h1>
             <h2>
               Nasze Ai wykryło że to {{ result }} jednak pamiętaj że zawsze może się pomylić
               dlatego warto iść
@@ -222,6 +224,7 @@ export default {
           console.log(prediction)
           ref.prediction = prediction[0] > prediction[1] ? prediction[0] - prediction[1] : prediction[1] - prediction[0]
           ref.result = prediction[0] > prediction[1] ? "niegroźne znamię" : "złośliwe znamię"
+          ref.pred_array = prediction
         }
       )
     }
@@ -231,6 +234,7 @@ export default {
       stage: 1,
       prediction: 0,
       result: '',
+      pred_array: [],
     }
   },
   computed: {
@@ -507,6 +511,16 @@ iframe {
 
   100% {
     transform: scale(1);
+  }
+}
+.help-sign{
+  font-size: 50px;
+  margin-left: 0.5rem;
+  transition: color 0.25s linear;
+  color: #fff;
+  cursor: pointer;
+  &:hover {
+    color: #fe6152;
   }
 }
 </style>

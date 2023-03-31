@@ -21,7 +21,7 @@
         <router-link to="/try">Przetestuj</router-link>
       </div>
     </nav>
-    <router-view v-slot="{ Component }" @popUP="togglePopup()">
+    <router-view v-slot="{ Component }" @popUP="togglePopup(); setWarnMsg()" @explainResult="showModelData">
       <transition name="fade">
         <component :is="Component" />
       </transition>
@@ -81,6 +81,14 @@ export default {
     togglePopup() {
       this.showPopup = !this.showPopup;
     },
+    setWarnMsg() {
+      this.message = 'Wciąż udoskonalamy nasz model by był jak najdokładniejszy, pamiętaj jednak że ma on obecnie dokładność 85% może on się więc czasem pomylić.'
+    },
+    showModelData(bening, malignant, percentage){
+      console.log(bening, malignant, percentage)
+      this.message = `Model przewiduje że szansa na to iż znamię ${bening > malignant ? 'nie stanowi zagrożenia' : 'stanowi zagrożenie rakowe'} jest o ${Math.round(percentage * 1000) / 10}% większa niż szansa na to iż znamię ${bening < malignant ? 'nie stanowi zagrożenia' : 'stanowi zagrożenie rakowe'}. Warto jednak pamiętać że tylko lekarz może dokonać finalnej diagnozy.`;
+      this.togglePopup();
+    }
   },
 };
 </script>
