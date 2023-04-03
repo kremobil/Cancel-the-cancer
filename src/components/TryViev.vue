@@ -109,7 +109,7 @@
     </div>
     <div class="cropImage" v-else-if='this.stage == 2'>
       <div class="cropAll">
-        <h2>Przytnij swoje zdjęcie żeby na środku było twoje znamie</h2>
+        <h2>Przytnij swoje zdjęcie żeby na środku było twoje znamie i zajmowało ok. połowę zdjęcia</h2>
         <div class="markCointainer">
           <img id="chosenImage">
         </div>

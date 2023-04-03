@@ -112,6 +112,8 @@ export default {
     console.log(cookies[cookieKeyIndex + 1], cookies[cookieKeyIndex + 1] == "accepted")
     if (cookies[cookieKeyIndex + 1] != "accepted") {
       this.togglePopup()
+    } else {
+      this.privacy = false;
     }
     
   }
