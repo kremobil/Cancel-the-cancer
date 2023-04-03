@@ -4,9 +4,10 @@
       <div class="cover" v-if="showPopup">
         <div class="popup-container">
           <div class="popup-message">
-            <h1>UWAGA!</h1>
+            <h1>{{title}}</h1>
             <h2>{{ message }}</h2>
-            <button @click="togglePopup()">OK</button>
+            <button v-if="privacy" @click="acceptPrivacy()">Akceptuję politykę prywatności strony</button>
+            <button v-else @click="togglePopup()">OK</button>
           </div>
         </div>
       </div>
@@ -42,6 +43,12 @@
               alt="Pasja informatyki"
             />
           </a>
+          <a href="https://lektoring.pl/" target="_blank">
+            <img
+              src="./assets/lektoringlogo.png"
+              alt="Lektoring.pl"
+            />
+          </a>
         </div>
       </div>
       <div class="socials">
@@ -74,7 +81,9 @@ export default {
     return {
       showPopup: false,
       message:
-        'Wciąż udoskonalamy nasz model by był jak najdokładniejszy, pamiętaj jednak że ma on obecnie dokładność 85% może on się więc czasem pomylić.',
+        'Korzystając z naszej strony twoje dane przechodzą przez serwery na których funkcjonuje strona (netlify, digitalocean). Twoje dane wykorzystujemy wyłącznie w celu diagnozy zmian skórnych i nigdzie ich nie zapisujemy. Życzymy miłego zwiedzania strony.',
+      title: 'Polityka prywatności',
+      privacy: true,
     };
   },
   methods: {
@@ -83,13 +92,29 @@ export default {
     },
     setWarnMsg() {
       this.message = 'Wciąż udoskonalamy nasz model by był jak najdokładniejszy, pamiętaj jednak że ma on obecnie dokładność 85% może on się więc czasem pomylić.'
+      this.title = 'Uwaga!'
     },
     showModelData(bening, malignant, percentage){
       console.log(bening, malignant, percentage)
       this.message = `Model przewiduje że szansa na to iż znamię ${bening > malignant ? 'nie stanowi zagrożenia' : 'stanowi zagrożenie rakowe'} jest o ${Math.round(percentage * 1000) / 10}% większa niż szansa na to iż znamię ${bening < malignant ? 'nie stanowi zagrożenia' : 'stanowi zagrożenie rakowe'}. Warto jednak pamiętać że tylko lekarz może dokonać finalnej diagnozy.`;
+      this.title = 'Co oznacza wynik?'
       this.togglePopup();
+    },
+    acceptPrivacy() {
+      this.privacy = false;
+      this.togglePopup()
+      document.cookie = "privacypolicy=accepted; expires=Thu, 18 Dec 2030 12:00:00 UTC"; 
     }
   },
+  mounted() {
+    const cookies = document.cookie.split("=")
+    const cookieKeyIndex = cookies.findIndex((cookie) => cookie == "privacypolicy")
+    console.log(cookies[cookieKeyIndex + 1], cookies[cookieKeyIndex + 1] == "accepted")
+    if (cookies[cookieKeyIndex + 1] != "accepted") {
+      this.togglePopup()
+    }
+    
+  }
 };
 </script>
 <style lang="scss">
@@ -347,9 +372,29 @@ nav {
       width: 280px;
     }
   }
+  .popup-message h1 {
+    font-size: 6.4rem;
+  }
+
+  .popup-message h2 {
+    font-size: 4.2rem;
+  }
 
   .popup-message button {
-    margin-top: 10px;
+    margin-top: 20px;
+  }
+  .popup-message a {
+    font-size: 3.6rem;
+    color: #fe6152;
+    text-decoration: underline;
+    font-weight: 700;
+    transition: color .5s ease-in-out;
+    &:hover{
+      color: #b9000f;
+    }
+  }
+  .popup-message h2{
+    margin-bottom: 20px;
   }
 }
 
@@ -390,14 +435,22 @@ nav {
   flex-direction: column;
   .patreaons-images {
     display: grid;
-    grid-template-columns: repeat(2, 300px);
+    grid-template-columns: repeat(3, 300px);
     gap: 2rem;
+    @media screen and (max-width: 1024px) {
+      grid-template-columns: 500px;
+    }
     @media screen and (max-width: 768px) {
       grid-template-columns: 300px;
     }
+      
+    }
     a{
-      width: 300px;
+      width: 100%;
       height: 150px;
+      @media screen and (max-width: 1024px) and (min-width: 768px) {
+        height: 200px;
+      }
       background-color: #fff;
       display: flex;
       align-items: center;
@@ -440,5 +493,4 @@ nav {
       }
     }
   }
-}
 </style>
