@@ -7,13 +7,10 @@
       </header>
 
       <h2>
-        Pomysł na projekt zrodził się podczas kursu
-        "AI&nbsp;for&nbsp;youth" organizowanego w naszej szkole przez firmę
-        Intel. Naszym opiekunem, a zarazem prowadzącym szkolenie na etapie
-        szkolnym był pan&nbsp;wicedyrektor&nbsp;Paweł Sankowski, któremu
-        chcieliśmy z tego miejsca podziękować za opiekę nad projektem.
-        Wraz z naszym projektem zostaliśmy finalistami przedsięwzięcia
-        ale nie poprzestaliśmy na tym i dalej roziwjamy projekt.
+        Pomysł na projekt zrodził się podczas kursu "AI4youth" organizowanego w naszej szkole przez firmę Intel. 
+        Naszym opiekunem, a zarazem prowadzącym szkolenie na etapie szkolnym był pan&nbsp;wicedyrektor&nbsp;Paweł Sankowski, 
+        któremu chcieliśmy z tego miejsca podziękować za opiekę nad projektem. Wraz z naszym projektem zostaliśmy finalistami 
+        przedsięwzięcia, ale nie poprzestaliśmy na tym i dalej rozwijamy projekt. 
         <br />
       </h2>
     </section>
@@ -28,16 +25,13 @@
               <hr class="line" />
             </header>
             <p>
-              Jestem uczniem klasy drugiej technikum i pasjonuję się programowaniem.
-              Skupiam się głównie na front end developmentcie z wykorzystaniem frameworka Vue.
-              Moim drugim ulubionym językiem programowania jest Python, który wykorzystuję do
-              tworzenia różnego rodzaju API oraz do projektowania sztucznej inteligencji, jak
-              chociażby ten projekt.
-              W wolnym czasie lubię majsterkować i eksperymentować z prostą elektroniką. Mam trzy
-              psy i jednego kota, które dają mi mi wiele radości i pozytywnej energii.
-              Programowanie to
-              dla mnie pasja i jestem bardzo zadowolony, że mogę rozwijać swoje umiejętności w
-              tej dziedzinie.
+              Jestem uczniem klasy drugiej technikum i pasjonuję się programowaniem. 
+              Skupiam się głównie na front end developmentcie z wykorzystaniem frameworka Vue. 
+              Moim drugim ulubionym językiem programowania jest Python, 
+              który wykorzystuję do tworzenia różnego rodzaju API oraz do projektowania sztucznej inteligencji, 
+              jak chociażby ten projekt. W wolnym czasie lubię majsterkować i eksperymentować z prostą elektroniką. 
+              Mam trzy psy i jednego kota, które dają mi wiele radości i pozytywnej energii. 
+              Programowanie to dla mnie pasja i jestem bardzo zadowolony, że mogę rozwijać swoje umiejętności w tej dziedzinie.
             </p>
           </article>
         </div>
@@ -49,17 +43,14 @@
               <hr class="line" />
             </header>
             <p>
-              Jestem Paweł, moim hobby jest tworzenie stron internetowych w
-              frameworku Vue, które
-              są łatwe w obsłudze i dostarczają użytkownikom wartościowe treści.
-              Poza Vue, moim drugim ulubionym językiem programowania jest Python. Doceniam jego
-              prostotę i wszechstronność. Interesuję się również drukiem 3D i nowinkami
-              technologicznymi. Fascynuje mnie, jak
-              nowoczesne technologie mogą wpłynąć na nasze życie i jak można je wykorzystać do
-              rozwiązywania problemów w różnych dziedzinach.
-              Poza pracą nad projektami informatycznymi, lubię spotykać się z przyjaciółmi. Cenię
-              sobie dobre relacje z innymi ludźmi i uważam, że czas spędzony z bliskimi jest
-              niezwykle ważny.
+              Jestem Paweł, moim hobby jest tworzenie stron internetowych w frame worku Vue, 
+              które są łatwe w obsłudze i dostarczają użytkownikom wartościowe treści. 
+              Poza Vue moim drugim ulubionym językiem programowania jest Python. Doceniam jego prostotę i wszechstronność. 
+              Interesuję się również drukiem 3D i nowinkami technologicznymi. Fascynuje mnie, 
+              jak nowoczesne technologie mogą wpłynąć na nasze życie i jak można je wykorzystać 
+              do rozwiązywania problemów w różnych dziedzinach. Poza pracą nad projektami informatycznymi 
+              lubię spotykać się z przyjaciółmi. Cenię sobie dobre relacje z innymi ludźmi i uważam, że czas spędzony 
+              z bliskimi jest niezwykle ważny.
             </p>
           </article>
         </div>

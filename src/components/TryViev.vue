@@ -102,14 +102,16 @@
       </svg>
       <div class="main">
         <img src="../assets/Undraw_board.svg" alt="Zdjęcie" id='board'>
-        <h2>Szybko i sprawnie sprawdź swoje znamiona by spać w spokoju o swoje zdrowie</h2>
+        <h2>Szybko i sprawnie sprawdź swoje znamiona, by spać w spokoju o swoje zdrowie.</h2>
         <label for='btn'>Prześlij zdjęcie znamienia</label>
         <input type="file" accept="image/*" @change="cropImg($event)" id='btn' name='btn'>
       </div>
     </div>
     <div class="cropImage" v-else-if='this.stage == 2'>
       <div class="cropAll">
-        <h2>Przytnij swoje zdjęcie żeby na środku było twoje znamie i zajmowało ok. połowę zdjęcia</h2>
+        <h2>
+          Przytnij swoje zdjęcie, żeby na środku było twoje znamię i zajmowało ok. połowę zdjęcia.
+        </h2>
         <div class="markCointainer">
           <img id="chosenImage">
         </div>
@@ -133,10 +135,7 @@
               help
               </span></h1>
             <h2>
-              Nasze Ai wykryło że to {{ result }} jednak pamiętaj że zawsze może się pomylić
-              dlatego warto iść
-              do
-              lekarza oraz na regularne wizyty
+              Nasze AI wykryło, że to {{ result }} jednak pamiętaj, że zawsze może się pomylić dlatego warto iść do lekarza oraz na regularne wizyt. 
             </h2>
           </div>
         </Transition>

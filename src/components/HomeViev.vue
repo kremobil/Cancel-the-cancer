@@ -5,8 +5,8 @@
         <div class="text">
           <h1>Nie daj się zaskoczyć!</h1>
           <h2>
-            Dzięki naszemu modelowi sztucznej inteligencji sprawdzisz czy
-            znamiona na twojej skórze są zagrożeniem dla zdrowia.
+            Dzięki naszemu modelowi sztucznej inteligencji sprawdzisz, 
+            czy znamiona na twojej skórze są zagrożeniem dla zdrowia. 
           </h2>
         </div>
         <img id="mobile-img" src="../assets/hero_img.svg" alt="2 odctors ilustration" />
@@ -40,12 +40,11 @@
       <h1>Cel naszego projektu.</h1>
       <img src="../assets/rule.svg" alt="dobre zdorwie i jakość życia" />
       <h2>
-        Nasz projekt tworzymy z myślą o tym, by ułatwić wczesne wykrycie zmian nowotworowych
-        skóry i zapobiegać ich rozwojowi. Rak to śmiertelna choroba, która atakuje
-        niespodziewanie. Rocznie ok. 100tys. ludzi umiera na tę okropną chorobę. Dzięki wczesnemu
-        wykrywaniu niebezpiecznych znamion mamy znacznie większe szanse na wyleczenie. Planujemy,
-        aby każdy mógł sprawdzić czy jego zmiany skórne stanową zagrożenie i w razie potrzeby
-        podjął leczenie, bądź skonsultował się z lekarzem dermatologiem lub onkologiem.
+        Nasz projekt tworzymy z myślą o tym, by ułatwić wczesne wykrycie zmian nowotworowych skóry i zapobiegać ich rozwojowi.
+        Rak to śmiertelna choroba, która atakuje niespodziewanie. Rocznie ok. 100tys. ludzi umiera na tę okropną chorobę. 
+        Dzięki wczesnemu wykrywaniu niebezpiecznych znamion mamy znacznie większe szanse na wyleczenie. 
+        Planujemy, aby każdy mógł sprawdzić czy jego zmiany skórne stanową zagrożenie i w razie potrzeby podjął leczenie, 
+        bądź skonsultował się z lekarzem dermatologiem lub onkologiem. 
       </h2>
     </section>
   </div>

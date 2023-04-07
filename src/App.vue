@@ -81,7 +81,7 @@ export default {
     return {
       showPopup: false,
       message:
-        'Korzystając z naszej strony twoje dane przechodzą przez serwery na których funkcjonuje strona (netlify, digitalocean). Twoje dane wykorzystujemy wyłącznie w celu diagnozy zmian skórnych i nigdzie ich nie zapisujemy. Życzymy miłego zwiedzania strony.',
+        'Korzystając z naszej strony, twoje dane przechodzą przez serwery, na których funkcjonuje strona (Netlify, DigitalOcean). Twoje dane wykorzystujemy wyłącznie w celu diagnozy zmian skórnych i nigdzie ich nie zapisujemy. Życzymy miłego zwiedzania strony.',
       title: 'Polityka prywatności',
       privacy: true,
     };
@@ -91,12 +91,12 @@ export default {
       this.showPopup = !this.showPopup;
     },
     setWarnMsg() {
-      this.message = 'Wciąż udoskonalamy nasz model by był jak najdokładniejszy, pamiętaj jednak że ma on obecnie dokładność 85% może on się więc czasem pomylić.'
+      this.message = 'Wciąż udoskonalamy nasz model, by był jak najdokładniejszy. Pamiętaj jednak, że ma on obecnie dokładność 85% może on się więc czasem pomylić.'
       this.title = 'Uwaga!'
     },
     showModelData(bening, malignant, percentage){
       console.log(bening, malignant, percentage)
-      this.message = `Model przewiduje że szansa na to iż znamię ${bening > malignant ? 'nie stanowi zagrożenia' : 'stanowi zagrożenie rakowe'} jest o ${Math.round(percentage * 1000) / 10}% większa niż szansa na to iż znamię ${bening < malignant ? 'nie stanowi zagrożenia' : 'stanowi zagrożenie rakowe'}. Warto jednak pamiętać że tylko lekarz może dokonać finalnej diagnozy.`;
+      this.message = `Model przewiduje, że szansa na to, iż znamię ${bening > malignant ? 'nie stanowi zagrożenia' : 'stanowi zagrożenie rakowe'} jest o ${Math.round(percentage * 1000) / 10}% większa niż szansa na to, iż znamię ${bening < malignant ? 'nie stanowi zagrożenia' : 'stanowi zagrożenie rakowe'}. Warto jednak pamiętać, że tylko lekarz może dokonać finalnej diagnozy.`;
       this.title = 'Co oznacza wynik?'
       this.togglePopup();
     },
