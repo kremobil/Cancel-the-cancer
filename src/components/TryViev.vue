@@ -110,7 +110,8 @@
     <div class="cropImage" v-else-if='this.stage == 2'>
       <div class="cropAll">
         <h2>
-          Przytnij swoje zdjęcie, żeby na środku było twoje znamię i zajmowało ok. połowę zdjęcia.
+          Przytnij swoje zdjęcie, żeby na środku było twoje znamię i zajmowało ok. połowę
+          zdjęcia.
         </h2>
         <div class="markCointainer">
           <img id="chosenImage">
@@ -131,11 +132,14 @@
             </h2>
           </div>
           <div class="rs" v-else>
-            <h1>Model jest pewny w {{ probability }}<span class="material-symbols-outlined help-sign" @click="$emit('explainResult', pred_array[0], pred_array[1], prediction)">
-              help
+            <h1>Model jest pewny w {{ probability }}<span
+                class="material-symbols-outlined help-sign"
+                @click="$emit('explainResult', pred_array[0], pred_array[1], prediction)">
+                help
               </span></h1>
             <h2>
-              Nasze AI wykryło, że to {{ result }} jednak pamiętaj, że zawsze może się pomylić dlatego warto iść do lekarza oraz na regularne wizyt. 
+              Nasze AI wykryło, że to {{ result }} jednak pamiętaj, że zawsze może się pomylić
+              dlatego warto iść do lekarza oraz na regularne wizyt.
             </h2>
           </div>
         </Transition>
@@ -512,14 +516,91 @@ iframe {
     transform: scale(1);
   }
 }
-.help-sign{
+
+.help-sign {
   font-size: 50px;
   margin-left: 0.5rem;
   transition: color 0.25s linear;
   color: #fff;
   cursor: pointer;
+
   &:hover {
     color: #fe6152;
   }
 }
 </style>
+<!--Cropper style-->
+<style lang='scss'>
+@import url(https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.css);
+
+.cropper-point {
+  background-color: #fe6152;
+}
+
+.cropper-line {
+  background-color: #f54a3b;
+}
+
+.cropper-center {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  background: transparent;
+  border: 3px dotted #fe6152;
+  opacity: 0.85;
+
+  &::after,
+  &::before {
+    display: none;
+  }
+}
+
+.cropper-dashed {
+  border: 0 dashed #fe6152;
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+  display: block;
+  opacity: 0.85;
+  position: absolute;
+}
+
+.cropper-face {
+  background-color: #ffffff;
+  left: 0;
+  top: 0;
+}
+
+.cropper-view-box {
+  display: block;
+  height: 100%;
+  outline: 1px solid #39f;
+  outline-color: rgb(254, 97, 82);
+  outline-color: rgb(254, 97, 82, 0.75);
+  overflow: hidden;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .cropper-point.point-se {
+    bottom: -3px;
+    cursor: nwse-resize;
+    height: 8px;
+    opacity: 1;
+    right: -3px;
+    width: 8px;
+  }
+
+  .cropper-point.point-sw,
+  .cropper-point.point-nw,
+  .cropper-point.point-ne,
+  .cropper-point.point-s,
+  .cropper-point.point-w,
+  .cropper-point.point-n,
+  .cropper-point.point-e {
+    display: none;
+  }
+}</style>
