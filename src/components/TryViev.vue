@@ -110,8 +110,7 @@
     <div class="cropImage" v-else-if='this.stage == 2'>
       <div class="cropAll">
         <h2>
-          Przytnij swoje zdjęcie, żeby na środku było twoje znamię i zajmowało ok. połowę
-          zdjęcia.
+          Przytnij swoje zdjęcie, aby znajdowało się w czerwonym kółku.
         </h2>
         <div class="markCointainer">
           <img id="chosenImage">
@@ -603,4 +602,5 @@ iframe {
   .cropper-point.point-e {
     display: none;
   }
-}</style>
+}
+</style>
