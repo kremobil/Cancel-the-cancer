@@ -156,22 +156,9 @@
 <script>
 import Cropper from 'cropperjs';
 export default {
-  beforeRouteLeave(to, from, next) {
-    if (this.stage === 2) {
-      const cropper = document.querySelector('#chosenImage').cropper;
-      if (cropper) {
-        cropper.destroy();
-      }
-    }
-    next();
-  },
   methods: {
     changeProgress(stage) {
       this.stage = stage
-
-      if (stage == 1) {
-        window.location.reload(true);
-      }
     },
 
     cropImg(input) {
@@ -186,7 +173,13 @@ export default {
         setTimeout(() => {
 
           let chosenImage = document.querySelector('#chosenImage');
+
           chosenImage.setAttribute("src", reader.result);
+
+          let childs = document.querySelectorAll('.markCointainer')[0].childNodes
+          if (childs.length > 1) {
+            childs[childs.length - 1].remove()
+          }
 
           const cropper = new Cropper(chosenImage, {
             aspectRatio: 1,
@@ -199,7 +192,7 @@ export default {
           document.querySelector('.next').addEventListener('click', function () {
             cropper.getCroppedCanvas({ width: 256, height: 256 }).toBlob((blob) => {
               let file = new File([blob], "fileName.jpg", { type: "image/jpeg" })
-              ref.getResponse(file)
+              ref.getResponse(file);
             }, 'image/jpeg');
           });
         }, 5);
