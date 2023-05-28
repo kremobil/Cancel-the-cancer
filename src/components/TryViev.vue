@@ -110,7 +110,7 @@
     <div class="cropImage" v-else-if='this.stage == 2'>
       <div class="cropAll">
         <h2>
-          Przytnij swoje zdjęcie, aby znajdowało się w czerwonym kółku.
+          Przytnij zdjęcie swojego znamienia, tak aby znajdowało się w czerwonym kółku.
         </h2>
         <div class="markCointainer">
           <img id="chosenImage">
