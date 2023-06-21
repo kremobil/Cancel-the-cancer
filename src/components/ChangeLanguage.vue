@@ -86,6 +86,7 @@
       justify-content: space-between;
       border-bottom: 2px solid white;
       gap: 3rem;
+      cursor: pointer;
       &:last-child{
         border: none;
       }
@@ -93,6 +94,11 @@
         font-size: 3.2rem;
         color: white;
         font-family: 'Anton', sans-serif;
+        transition: color 0.5s ease-in-out;
+
+      }
+      &:hover p{
+        color: #fe6152;
       }
       img{
         object-fit: cover;
