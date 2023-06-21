@@ -1,7 +1,7 @@
 <template lang="html">
   <div class='wrapper'>
     <div class="cointainer">
-      <h1>Krok {{ stage }}</h1>
+      <h1>{{ $t("try.step") }} {{ stage }}</h1>
       <div class="progressBar">
         <div class="line">
           <div class="fill"
@@ -102,22 +102,20 @@
       </svg>
       <div class="main">
         <img src="../assets/Undraw_board.svg" alt="Zdjęcie" id='board'>
-        <h2>Szybko i sprawnie sprawdź swoje znamiona, by spać w spokoju o swoje zdrowie.</h2>
-        <label for='btn'>Prześlij zdjęcie znamienia</label>
+        <h2>{{ $t("try.stepOneMessasge") }}</h2>
+        <label for='btn'>{{ $t("try.stepOneButton") }}</label>
         <input type="file" accept="image/*" @change="cropImg($event)" id='btn' name='btn'>
       </div>
     </div>
     <div class="cropImage" v-else-if='this.stage == 2'>
       <div class="cropAll">
-        <h2>
-          Przytnij zdjęcie swojego znamienia, tak aby znajdowało się w czerwonym kółku.
-        </h2>
+        <h2>{{ $t("try.stepTwoMessage") }}</h2>
         <div class="markCointainer">
           <img id="chosenImage">
         </div>
         <div class="moveTo">
-          <button class="back" @click='changeProgress(1)'>Cofnij</button>
-          <button class="next" @click='changeProgress(3); $emit("popUP")'>Wytnij</button>
+          <button class="back" @click='changeProgress(1)'>{{ $t("try.backButton") }}</button>
+          <button class="next" @click='changeProgress(3); $emit("popUP")'>{{ $t("try.cropButton") }}</button>
         </div>
       </div>
     </div>
@@ -125,25 +123,25 @@
       <div class="score">
         <Transition name='modelText' mode="out-in">
           <div class="rs" v-if='this.prediction == 0'>
-            <h1>Trwa sprawdzanie...</h1>
-            <h2>
-              Prosimy o poczekanie aż nasz model sprawdzi twoje znamię.
-            </h2>
+            <h1>{{ $t("try.stepThreeLoadingTitle") }}</h1>
+            <h2>{{ $t("try.stepThreeLoadingMessage") }}</h2>
           </div>
           <div class="rs" v-else>
-            <h1>Model jest pewny w {{ probability }}<span
+            <h1>{{ $t("try.stepThreePredictionTitle") }} {{ probability }}<span
                 class="material-symbols-outlined help-sign"
                 @click="$emit('explainResult', pred_array[0], pred_array[1], prediction)">
                 help
               </span></h1>
-            <h2>
-              Nasze AI wykryło, że to {{ result }} jednak pamiętaj, że zawsze może się pomylić
-              dlatego warto iść do lekarza oraz na regularne wizyt.
+            <h2 v-if="pred_array[0] < pred_array[1]">
+              {{ $t("try.stepThreeBadMessage")}}
+            </h2>
+            <h2 v-else>
+              {{ $t("try.stepThreeGoodMessage")}}
             </h2>
           </div>
         </Transition>
-        <button @click='changeProgress(1)'>sprawdź kolejne znamię</button>
-        <h2 id='dropText'>Jeśli nasz projekt ci się podoba, wesprzyj nas!</h2>
+        <button @click='changeProgress(1)'>{{ $t("try.stepThreeButton")}}</button>
+        <h2 id='dropText'>{{ $t("try.stepThreeFundraising")}}</h2>
         <div style="position: relative; width: 400px; height: 400px; overflow: hidden;"
           class='frameDrop'><iframe
             style="position: absolute; top:0; left: 0; bottom: 0; right: 0; width: 100%; height: 100%;"
@@ -218,7 +216,6 @@ export default {
         (prediction) => {
           console.log(prediction)
           ref.prediction = prediction[0] > prediction[1] ? prediction[0] - prediction[1] : prediction[1] - prediction[0]
-          ref.result = prediction[0] > prediction[1] ? "niegroźne znamię" : "złośliwe znamię"
           ref.pred_array = prediction
         }
       )

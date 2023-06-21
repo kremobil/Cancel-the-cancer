@@ -6,8 +6,9 @@
           <div class="popup-message">
             <h1>{{title}}</h1>
             <h2>{{ message }}</h2>
-            <button v-if="privacy" @click="acceptPrivacy()">Akceptuję politykę prywatności strony</button>
+            <button v-if="privacy" @click="acceptPrivacy()">{{ $t("popup.acceptPrivacy") }}</button>
             <button v-else @click="togglePopup()">OK</button>
+
           </div>
         </div>
       </div>
@@ -15,21 +16,22 @@
     <nav>
       <header>
         <img src="./assets/logo.svg" alt="Cancel the cancer logo" />
+        <ChangeLanguage/>
       </header>
       <div class="routers">
-        <router-link to="/">Strona główna</router-link>
-        <router-link to="/about">O nas</router-link>
-        <router-link to="/try">Przetestuj</router-link>
+        <router-link to="/"> {{ $t("nav.home") }} </router-link>
+        <router-link to="/about"> {{ $t("nav.about") }} </router-link>
+        <router-link to="/try" class="borderButton"> {{ $t("nav.try") }} </router-link>
       </div>
     </nav>
     <router-view v-slot="{ Component }" @popUP="togglePopup(); setWarnMsg()" @explainResult="showModelData">
-      <transition name="fade">
+      <Transition name="fade">
         <component :is="Component" />
-      </transition>
+      </Transition>
     </router-view>
     <footer>
       <div class="patreons">
-        <h2>Patroni projektu</h2>
+        <h2>{{ $t("footer.patreons") }}</h2>
         <div class="patreaons-images">
           <a href="https://zwolnienizteorii.pl/" target="_blank">
             <img
@@ -52,7 +54,7 @@
         </div>
       </div>
       <div class="socials">
-        <h2>Sprawdź nasze social media</h2>
+        <h2>{{ $t("footer.socialMedia") }}</h2>
         <div class="socials-links">
           <a href="https://www.instagram.com/cancelthecancerai/" id="ig" target="_blank" title="Sprawdź naszego insta">
             <!-- image from https://www.flaticon.com/free-icons/instagram-logo -->
@@ -69,20 +71,20 @@
         </div>
       </div>
       <hr />
-      <h3>
-        Cancel the cancer 2023 &copy; wykonali Wiktor Fajkowski i Paweł Gołata
-      </h3>
+      <h3>{{ $t("footer.copy") }}</h3>
     </footer>
   </div>
 </template>
 <script>
+import ChangeLanguage from "@/components/ChangeLanguage.vue";
+
 export default {
+  components: {ChangeLanguage},
   data() {
     return {
       showPopup: false,
-      message:
-        'Korzystając z naszej strony, twoje dane przechodzą przez serwery, na których funkcjonuje strona (Netlify, DigitalOcean). Twoje dane wykorzystujemy wyłącznie w celu diagnozy zmian skórnych i nigdzie ich nie zapisujemy. Życzymy miłego zwiedzania strony.',
-      title: 'Polityka prywatności',
+      message: this.$t("popup.privacyMessage"),
+      title: this.$t("popup.privacyTitle"),
       privacy: true,
     };
   },
@@ -91,13 +93,22 @@ export default {
       this.showPopup = !this.showPopup;
     },
     setWarnMsg() {
-      this.message = 'Wciąż udoskonalamy nasz model, by był jak najdokładniejszy. Pamiętaj jednak, że ma on obecnie dokładność 85% może on się więc czasem pomylić.'
-      this.title = 'Uwaga!'
+      this.message = this.$t("popup.warnMessage")
+      this.title = this.$t("popup.warnTitle")
     },
     showModelData(bening, malignant, percentage){
       console.log(bening, malignant, percentage)
-      this.message = `Model przewiduje, że szansa na to, iż znamię ${bening > malignant ? 'nie stanowi zagrożenia' : 'stanowi zagrożenie rakowe'} jest o ${Math.round(percentage * 1000) / 10}% większa niż szansa na to, iż znamię ${bening < malignant ? 'nie stanowi zagrożenia' : 'stanowi zagrożenie rakowe'}. Warto jednak pamiętać, że tylko lekarz może dokonać finalnej diagnozy.`;
-      this.title = 'Co oznacza wynik?'
+      this.message = this.$t("popup.modelMessage", [
+          this.$i18n.locale == "pl"?
+              bening > malignant ? 'nie stanowi zagrożenia' : 'stanowi zagrożenie rakowe':
+              bening > malignant ? 'does not present a risk' : 'represents a cancer risk',
+          Math.round(percentage * 1000) / 10,
+          this.$i18n.locale == "pl"?
+              bening < malignant ? 'nie stanowi zagrożenia' : 'stanowi zagrożenie rakowe':
+              bening < malignant ? 'does not present a risk' : 'represents a cancer risk'
+      ])
+      // `Model przewiduje, że szansa na to, iż znamię ${bening > malignant ? 'nie stanowi zagrożenia' : 'stanowi zagrożenie rakowe'} jest o ${Math.round(percentage * 1000) / 10}% większa niż szansa na to, iż znamię ${bening < malignant ? 'nie stanowi zagrożenia' : 'stanowi zagrożenie rakowe'}. Warto jednak pamiętać, że tylko lekarz może dokonać finalnej diagnozy.`;
+      this.title = this.$t("popup.modelTitle")
       this.togglePopup();
     },
     acceptPrivacy() {
@@ -205,49 +216,50 @@ button {
 nav {
   padding: 1rem;
   width: 90%;
-  min-height: 10vh;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
   user-select: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 
-  @media (max-width: 768px) {
-    min-height: 15vh;
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
   }
 
   img {
-    width: 50%;
+    height: 7rem;
   }
 
   header {
-    flex: 2 1 61rem;
+    display: flex;
+    gap: 5rem;
+    align-items: center;
 
     @media (max-width: 768px) {
-      text-align: center;
+      justify-content: center;
     }
   }
 
   .routers {
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     display: flex;
     padding: 1.2rem 0;
-    flex: 1 1 61rem;
 
     a {
-      font-size: 4.2rem;
+      font-size: 3.6rem;
       font-family: 'Anton', sans-serif;
       color: white;
       text-decoration: none;
       position: relative;
 
-      &:last-child {
+      &.borderButton {
         border: 0.2rem solid #fe6152;
         padding: 0.6rem 2rem;
         border-radius: 1rem;
       }
 
       @media (max-width: 768px) {
+        font-size: 4.2rem;
         &:nth-child(3) {
           order: 2;
         }
@@ -277,7 +289,7 @@ nav {
         width: 130%;
       }
 
-      &:last-child::after {
+      &.borderButton::after {
         position: absolute;
         transition-property: transform, background-color;
         transition-duration: 0.5s;
@@ -291,7 +303,7 @@ nav {
         z-index: -1;
       }
 
-      &:last-child:hover::after {
+      &.borderButton:hover::after {
         transform: scaleX(1);
         background-color: #fe6152;
       }

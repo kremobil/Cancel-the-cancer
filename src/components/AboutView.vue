@@ -2,20 +2,17 @@
   <div class="about-wrapper">
     <section class="about-us">
       <header>
-        <h1>Początek projektu</h1>
+        <h1>{{ $t("about.beginingsTitle") }}</h1>
         <hr class="line" />
       </header>
 
       <h2>
-        Pomysł na projekt zrodził się podczas kursu "AI4youth" organizowanego w naszej szkole przez firmę Intel. 
-        Naszym opiekunem, a zarazem prowadzącym szkolenie na etapie szkolnym był pan&nbsp;wicedyrektor&nbsp;Paweł Sankowski, 
-        któremu chcieliśmy z tego miejsca podziękować za opiekę nad projektem. Wraz z naszym projektem zostaliśmy finalistami 
-        przedsięwzięcia, ale nie poprzestaliśmy na tym i dalej rozwijamy projekt. 
+        {{ $t("about.beginingsMessage") }}
         <br />
       </h2>
     </section>
     <section class="persons-wrapper">
-      <h1>Autorzy</h1>
+      <h1>{{ $t("about.authorsTitle") }}</h1>
       <div class="cards">
         <div class="card">
           <img src="../assets/ja.jpg" alt="" />
@@ -24,15 +21,7 @@
               <h3>Wiktor Fajkowski</h3>
               <hr class="line" />
             </header>
-            <p>
-              Jestem uczniem klasy drugiej technikum i pasjonuję się programowaniem. 
-              Skupiam się głównie na front end developmentcie z wykorzystaniem frameworka Vue. 
-              Moim drugim ulubionym językiem programowania jest Python, 
-              który wykorzystuję do tworzenia różnego rodzaju API oraz do projektowania sztucznej inteligencji, 
-              jak chociażby ten projekt. W wolnym czasie lubię majsterkować i eksperymentować z prostą elektroniką. 
-              Mam trzy psy i jednego kota, które dają mi wiele radości i pozytywnej energii. 
-              Programowanie to dla mnie pasja i jestem bardzo zadowolony, że mogę rozwijać swoje umiejętności w tej dziedzinie.
-            </p>
+            <p>{{ $t("about.wiktor") }}</p>
           </article>
         </div>
         <div class="card">
@@ -42,16 +31,7 @@
               <h3>Paweł Gołata</h3>
               <hr class="line" />
             </header>
-            <p>
-              Jestem Paweł, moim hobby jest tworzenie stron internetowych w frame worku Vue, 
-              które są łatwe w obsłudze i dostarczają użytkownikom wartościowe treści. 
-              Poza Vue moim drugim ulubionym językiem programowania jest Python. Doceniam jego prostotę i wszechstronność. 
-              Interesuję się również drukiem 3D i nowinkami technologicznymi. Fascynuje mnie, 
-              jak nowoczesne technologie mogą wpłynąć na nasze życie i jak można je wykorzystać 
-              do rozwiązywania problemów w różnych dziedzinach. Poza pracą nad projektami informatycznymi 
-              lubię spotykać się z przyjaciółmi. Cenię sobie dobre relacje z innymi ludźmi i uważam, że czas spędzony 
-              z bliskimi jest niezwykle ważny.
-            </p>
+            <p>{{ $t("about.pawel") }}</p>
           </article>
         </div>
         <div class="card">
@@ -61,15 +41,7 @@
               <h3>Mateusz Torzewski</h3>
               <hr class="line" />
             </header>
-            <p>
-              Jestem uczniem drugiej klasy technikum o profilu programista. Wybór tej
-              specjalizacji wynika z mojej pasji do tworzenia, a programowanie pozwala mi na
-              rozwijanie tej pasji w bardzo ciekawy sposób. Przyjemność, jaką czerpię z
-              programowania, jest dla mnie nieoceniona. W czasie wolnym uwielbiam rysować oraz
-              tworzyć gry i proste programy w języku Python. Chętnie poszerzam swoją wiedzę z
-              dziedziny programowania i ten projekt jest dla mnie idealnym sposobem na rozwijanie
-              swoich umiejętności.
-            </p>
+            <p>{{ $t("about.mateusz") }}</p>
           </article>
         </div>
         <div class="card">
@@ -79,11 +51,7 @@
               <h3>Stanisław Fijołek</h3>
               <hr class="line" />
             </header>
-            <p>
-              Jestem uczniem klasy czwartej o profilu programista. Najbardziej
-              interesuję się technologiami webowymi, głównie TypeScript w Vue i
-              React. Poza programowaniem lubię zajmować się muzyką.
-            </p>
+            <p>{{ $t("about.stanislaw") }}</p>
           </article>
         </div>
       </div>
@@ -91,7 +59,11 @@
   </div>
 </template>
 <script>
-export default {};
+export default {
+  mounted() {
+    console.log(this.$i18n.locale)
+  }
+};
 </script>
 <style lang="scss" scoped>
 .persons-wrapper {

@@ -3,14 +3,11 @@
     <section id="hero">
       <article class="hero-text">
         <div class="text">
-          <h1>Nie daj się zaskoczyć!</h1>
-          <h2>
-            Dzięki naszemu modelowi sztucznej inteligencji sprawdzisz, 
-            czy znamiona na twojej skórze są zagrożeniem dla zdrowia. 
-          </h2>
+          <h1>{{ $t("home.heroTitle") }}</h1>
+          <h2>{{ $t("home.heroMessage") }}</h2>
         </div>
         <img id="mobile-img" src="../assets/hero_img.svg" alt="2 odctors ilustration" />
-        <router-link to="/try">Sprawdź teraz</router-link>
+        <router-link to="/try">{{ $t("home.heroButton") }}</router-link>
       </article>
       <img id="desktop-img" src="../assets/hero_img.svg" alt="2 odctors ilustration" />
       <section class="back-deco">
@@ -21,31 +18,14 @@
       </section>
     </section>
     <section id="who">
-      <h1>Dla kogo jest ten projekt?</h1>
-      <h2>
-        Projekt jest przeznaczony dla wszystkich osób, które chcą sprawdzić swoje znamię i
-        zidentyfikować, czy może ono stanowić zagrożenie dla zdrowia. Może on być szczególnie
-        przydatny dla osób, które obawiają się, że ich zmiana skórna może być objawem nowotworu
-        lub które chcą zwiększyć świadomość swojego stanu zdrowia skóry. Projekt ten jest
-        skierowany do osób w każdym wieku i płci, a jego celem jest przyśpieszenie diagnozowania
-        chorób skóry, takich jak czerniak, poprzez wykorzystanie sztucznej inteligencji do
-        analizowania zdjęć znamion skórnych. Jednocześnie projekt ma na celu zwiększenie
-        świadomości o konieczności regularnych wizyt kontrolnych u dermatologa w celu zwiększenia
-        skuteczności leczenia poprzez szybsze wykrycie potencjalnie niebezpiecznych zmian
-        skórnych.
-      </h2>
-      <router-link to="/try">Sprawdź swoje znamiona</router-link>
+      <h1>{{ $t("home.sectionTwoTitle") }}</h1>
+      <h2>{{ $t("home.sectionTwoMessage") }}</h2>
+      <router-link to="/try">{{ $t("home.sectionTwoButton") }}</router-link>
     </section>
     <section id="why">
-      <h1>Cel naszego projektu.</h1>
+      <h1>{{ $t("home.sectionThreeTitle") }}</h1>
       <img src="../assets/rule.svg" alt="dobre zdorwie i jakość życia" />
-      <h2>
-        Nasz projekt tworzymy z myślą o tym, by ułatwić wczesne wykrycie zmian nowotworowych skóry i zapobiegać ich rozwojowi.
-        Rak to śmiertelna choroba, która atakuje niespodziewanie. Rocznie ok. 100tys. ludzi umiera na tę okropną chorobę. 
-        Dzięki wczesnemu wykrywaniu niebezpiecznych znamion mamy znacznie większe szanse na wyleczenie. 
-        Planujemy, aby każdy mógł sprawdzić czy jego zmiany skórne stanową zagrożenie i w razie potrzeby podjął leczenie, 
-        bądź skonsultował się z lekarzem dermatologiem lub onkologiem. 
-      </h2>
+      <h2>{{ $t("home.sectionThreeMessage") }}</h2>
     </section>
   </div>
 </template>

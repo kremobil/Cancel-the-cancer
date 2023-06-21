@@ -1,0 +1,55 @@
+{
+	"about": {
+		"authorsTitle": "Authors",
+		"beginingsMessage": "The idea for the project was born during the 'AI4youth' course organized at our school by Intel. Our tutor, and at the same time the leader of the training at the school stage, was Mr Paweł Sankowski, the deputy headmaster, whom we would like to thank for taking care of the project. With our project we became finalists in the event, but we did not stop there and we are developing the project further.",
+		"beginingsTitle": "The beginning of the project",
+		"mateusz": "I am a second-year student at a technical school with a programming profile. The choice of this specialization stems from my passion for creation, and programming allows me to develop this passion in a very interesting way. The pleasure I derive from programming is invaluable to me. In my free time, I love to draw and create games and simple programs in Python. I am keen to expand my knowledge of programming and this project is the perfect way for me to develop my skills.",
+		"pawel": "I'm Paul, my hobby is to create websites in Vue framework, which are easy to use and provide users with valuable content. Besides Vue, my second favorite programming language is Python. I appreciate its simplicity and versatility. I am also interested in 3D printing and technological innovations. I am fascinated by, how modern technologies can impact our lives and how they can be used to solve to solve problems in different fields. Apart from working on IT projects I enjoy meeting up with friends. I value good relationships with other people and believe that time spent with loved ones is extremely important.",
+		"stanislaw": " I am a student of the fourth grade with the profile of programmer. I am most interested in web technologies, mainly TypeScript in Vue and React. In addition to programming, I like to be involved in music.",
+		"wiktor": "I am a second year technical school student and I am passionate about programming. I mainly focus on front end development using the Vue framework. My second favorite programming language is Python, which I use to create various API's and to design artificial intelligence, such as this project. In my spare time I enjoy tinkering and experimenting with simple electronics. I have three dogs and one cat, which give me a lot of joy and positive energy. Programming is a passion for me and I am very happy to develop my skills in this area."
+	},
+	"footer": {
+		"copy": "Cancel the cancer 2023 © performed by Wiktor Fajkowski and Pawel Golata\n",
+		"patreons": "Patrons of the project",
+		"socialMedia": "Check out our social media"
+	},
+	"home": {
+		"heroButton": "Check it out now",
+		"heroMessage": "With our artificial intelligence model, you will check,whether moles on your skin are a health risk.",
+		"heroTitle": "Don't be surprised!",
+		"sectionThreeMessage": "We are creating our project with the aim of facilitating the early detection of skin cancer lesions and preventing their development. Cancer is a deadly disease that attacks unexpectedly. Every year, around 100tys of people die from this terrible disease. By detecting dangerous moles early, we have a much better chance of a cure. We plan for everyone to be able to check whether their skin lesions pose a risk and take treatment if necessary, or consult a dermatologist or oncologist.",
+		"sectionThreeTitle": "The goal of our project.",
+		"sectionTwoButton": "Check your moles",
+		"sectionTwoMessage": "The project is designed for anyone who wants to check their birthmark and identify whether it may pose a health risk. It can be particularly useful for people who are concerned that their skin lesion may be a sign of cancer or who want to raise awareness of their skin health. Aimed at people of all ages and genders, the project aims to speed up the diagnosis of skin diseases such as melanoma by using artificial intelligence to analyze images of skin nevi. At the same time, the project aims to raise awareness of the need for regular check-ups with a dermatologist to increase the effectiveness of treatment by detecting potentially dangerous skin lesions more quickly.",
+		"sectionTwoTitle": "Who is this project for?"
+	},
+	"nav": {
+		"about": "about us",
+		"home": "home",
+		"try": "try it"
+	},
+	"popup": {
+		"acceptPrivacy": "I accept the privacy policy",
+		"modelMessage": "The model predicts that the chance of {0} being {1}% is greater than the chance of {2}. However, it is worth remembering that only a doctor can make a final diagnosis.",
+		"modelTitle": "What does the result mean?",
+		"privacyMessage": "By using our website, your data passes through the servers on which the website operates (Netlify, DigitalOcean). We use your data exclusively for the diagnosis of skin lesions and do not save it anywhere. We wish you a pleasant visit to the site.",
+		"privacyTitle": "Privacy policy",
+		"warnMessage": "We are constantly improving our model to make it as accurate as possible. However, keep in mind that it currently has an accuracy of 85%, so it can sometimes be wrong.",
+		"warnTitle": "Attention!"
+	},
+	"try": {
+		"backButton": "Back",
+		"cropButton": "Crop",
+		"step": "Step",
+		"stepOneButton": "Upload a photo of the mole",
+		"stepOneMessasge": "Quickly and efficiently check your moles to sleep in peace about your health.",
+		"stepThreeBadMessage": "Our AI detected that it is a malignant nevus however, remember that it can always be wrong so it is worth going to the doctor and remember about regular visits.",
+		"stepThreeGoodMessage": "Our AI detected that it is a harmless birthmark however, remember that it can always be wrong so it is worth going to the doctor and remember about regular visits.",
+		"stepThreeLoadingMessage": "Please wait until our model checks your birthmark.",
+		"stepThreeLoadingTitle": "Checking...",
+		"stepThreePredictionTitle": "The model is confident in",
+		"stepThreeButton": "Check another mole",
+		"stepThreeFundraising": "If you like our project, support us!",
+		"stepTwoMessage": "Trim the photo of your birthmark so that it is inside the red circle."
+	}
+}
