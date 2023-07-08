@@ -10,17 +10,17 @@
 	},
 	"footer": {
 		"copy": "Cancel the cancer 2023 © performed by Wiktor Fajkowski and Pawel Golata\n",
-		"patreons": "Patrons of the project",
+		"patreons": "Project patrons",
 		"socialMedia": "Check out our social media"
 	},
 	"home": {
-		"heroButton": "Check it out now",
-		"heroMessage": "With our artificial intelligence model, you will check,whether moles on your skin are a health risk.",
-		"heroTitle": "Don't be surprised!",
-		"sectionThreeMessage": "We are creating our project with the aim of facilitating the early detection of skin cancer lesions and preventing their development. Cancer is a deadly disease that attacks unexpectedly. Every year, around 100tys of people die from this terrible disease. By detecting dangerous moles early, we have a much better chance of a cure. We plan for everyone to be able to check whether their skin lesions pose a risk and take treatment if necessary, or consult a dermatologist or oncologist.",
+		"heroButton": "Try it now\n",
+		"heroMessage": "With Our artificial intelligence model you can check if your moles and skin changes can be a danger to your health.",
+		"heroTitle": "Don’t let cancer surprise you!",
+		"sectionThreeMessage": "With this project, we aim to help detect dangerous skin lesions early to help prevent thier development. Cancer is a deadly disease that attacks unexpectedly. Every year, around 100 thousand of people die from this terrible disease. By detecting dangerous moles early, there is a much higher chance for successful treatment. We plan for everyone to be able to check whether their skin lesions pose a risk and get treatment if necessary, or consult a dermatologist or oncologist.",
 		"sectionThreeTitle": "The goal of our project.",
 		"sectionTwoButton": "Check your moles",
-		"sectionTwoMessage": "The project is designed for anyone who wants to check their birthmark and identify whether it may pose a health risk. It can be particularly useful for people who are concerned that their skin lesion may be a sign of cancer or who want to raise awareness of their skin health. Aimed at people of all ages and genders, the project aims to speed up the diagnosis of skin diseases such as melanoma by using artificial intelligence to analyze images of skin nevi. At the same time, the project aims to raise awareness of the need for regular check-ups with a dermatologist to increase the effectiveness of treatment by detecting potentially dangerous skin lesions more quickly.",
+		"sectionTwoMessage": "This project is for everyone who wants to check if thier moles can be a danger to thier health. It could be particularly useful for people who are concerned that their skin change may be a sign of cancer. Our project is for people of all ages and genders, it aims to speed up the diagnosis of skin diseases such as melanoma by using artificial intelligence to analyze images of skin nevi. At the same time, the project aims to raise awareness of the need for regular check-ups with a dermatologist to increase the effectiveness of treatment by detecting potentially dangerous skin lesions quicker.",
 		"sectionTwoTitle": "Who is this project for?"
 	},
 	"nav": {

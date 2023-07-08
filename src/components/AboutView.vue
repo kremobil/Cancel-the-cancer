@@ -79,7 +79,9 @@ export default {
     margin: 5rem 0;
   }
 }
-
+h1 {
+  text-align: center;
+}
 .cards {
   .card {
     border: 0.3rem solid #fe6152;
