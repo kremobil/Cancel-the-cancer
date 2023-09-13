@@ -30,7 +30,7 @@
 	},
 	"popup": {
 		"acceptPrivacy": "Akceptuję politykę prywatności",
-		"modelMessage": "Model przewiduje, że szansa na to, iż znamię {0} jest o {1}% większa niż szansa na to, iż znamię {2}. Warto jednak pamiętać, że tylko lekarz może dokonać finalnej diagnozy.",
+		"modelMessage": "Model przewiduje, że szansa na to, iż znamię {0} wynosi {1}% natomiast szansa na to, iż znamię {2} wynosi {3}%. Warto jednak pamiętać, że tylko lekarz może dokonać finalnej diagnozy.",
 		"modelTitle": "Co oznacza wynik?",
 		"privacyMessage": "Korzystając z naszej strony, twoje dane przechodzą przez serwery, na których funkcjonuje strona (Netlify, DigitalOcean). Twoje dane wykorzystujemy wyłącznie w celu diagnozy zmian skórnych i nigdzie ich nie zapisujemy. Życzymy miłego zwiedzania strony.",
 		"privacyTitle": "Polityka prywatności",

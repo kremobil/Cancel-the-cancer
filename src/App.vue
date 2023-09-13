@@ -101,11 +101,12 @@ export default {
       this.message = this.$t("popup.modelMessage", [
           this.$i18n.locale == "pl"?
               bening > malignant ? 'nie stanowi zagrożenia' : 'stanowi zagrożenie rakowe':
-              bening > malignant ? 'does not present a risk' : 'represents a cancer risk',
+              bening > malignant ? 'not a threat' : 'a cancer risk',
           Math.round(percentage * 1000) / 10,
           this.$i18n.locale == "pl"?
               bening < malignant ? 'nie stanowi zagrożenia' : 'stanowi zagrożenie rakowe':
-              bening < malignant ? 'does not present a risk' : 'represents a cancer risk'
+              bening < malignant ? 'not a risk' : 'a cancer threat',
+          100 - Math.round(percentage * 1000) / 10
       ])
       // `Model przewiduje, że szansa na to, iż znamię ${bening > malignant ? 'nie stanowi zagrożenia' : 'stanowi zagrożenie rakowe'} jest o ${Math.round(percentage * 1000) / 10}% większa niż szansa na to, iż znamię ${bening < malignant ? 'nie stanowi zagrożenia' : 'stanowi zagrożenie rakowe'}. Warto jednak pamiętać, że tylko lekarz może dokonać finalnej diagnozy.`;
       this.title = this.$t("popup.modelTitle")

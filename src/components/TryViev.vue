@@ -215,7 +215,7 @@ export default {
       ).then(
         (prediction) => {
           console.log(prediction)
-          ref.prediction = prediction[0] > prediction[1] ? prediction[0] - prediction[1] : prediction[1] - prediction[0]
+          ref.prediction = prediction[0] > prediction[1] ? prediction[0] : prediction[1]
           ref.pred_array = prediction
         }
       )
@@ -407,6 +407,7 @@ html {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  text-align: center;
 
   .markCointainer {
     width: fit-content;
