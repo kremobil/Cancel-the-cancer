@@ -1,11 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import HomeViev from '../components/HomeViev.vue';
-import TryViev from '../components/TryViev.vue';
+// import TryViev from '../components/TryViev.vue';
+import WorkInProgressView from "@/components/WorkInProgressView.vue";
 import AboutView from '../components/AboutView.vue';
 
 const routes = [
 	{ path: '/', component: HomeViev },
-	{ path: '/try', component: TryViev },
+	{ path: '/try', component: WorkInProgressView },
 	{ path: '/about', component: AboutView },
 ];
 

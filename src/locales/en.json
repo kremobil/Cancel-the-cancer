@@ -51,5 +51,11 @@
 		"stepThreeButton": "Check another mole",
 		"stepThreeFundraising": "If you like our project, support us!",
 		"stepTwoMessage": "Cut the photo of your mole so that it fits inside the red circle."
+	},
+	"work": {
+		"title": "Feature temporarily unavailable!",
+		"content": "Due to ongoing work on the effectives of our model we decided to temporary suspend it. In the near future we will provide more information on the topic.",
+		"alt": "work in progress image",
+		"back": "home page"
 	}
 }

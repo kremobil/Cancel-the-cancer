@@ -1,55 +1,61 @@
 {
-	"about": {
-		"authorsTitle": "Autorzy",
-		"beginingsMessage": "Pomysł na projekt zrodził się podczas konkursu \"AI4youth\" organizowanego w naszej szkole przez firmę Intel. Naszym opiekunem, a zarazem prowadzącym szkolenie na etapie szkolnym był pan wicedyrektor Paweł Sankowski, któremu chcieliśmy z tego miejsca podziękować za opiekę nad projektem. Wraz z naszym projektem zostaliśmy finalistami przedsięwzięcia, ale nie poprzestaliśmy na tym i dalej rozwijamy projekt. ",
-		"beginingsTitle": "Początek projektu",
-		"mateusz": "Jestem uczniem drugiej klasy technikum o profilu programista. Wybór tej specjalizacji wynika z mojej pasji do tworzenia, a programowanie pozwala mi na rozwijanie tej pasji w bardzo ciekawy sposób. Przyjemność, jaką czerpię z programowania, jest dla mnie nieoceniona. W czasie wolnym uwielbiam rysować oraz tworzyć gry i proste programy w języku Python. Chętnie poszerzam swoją wiedzę z dziedziny programowania i ten projekt jest dla mnie idealnym sposobem na rozwijanie swoich umiejętności.",
-		"pawel": "Jestem Paweł, moim hobby jest tworzenie stron internetowych w frame worku Vue, które są łatwe w obsłudze i dostarczają użytkownikom wartościowe treści. Poza Vue moim drugim ulubionym językiem programowania jest Python. Doceniam jego prostotę i wszechstronność. Interesuję się również drukiem 3D i nowinkami technologicznymi. Fascynuje mnie, jak nowoczesne technologie mogą wpłynąć na nasze życie i jak można je wykorzystać do rozwiązywania problemów w różnych dziedzinach. Poza pracą nad projektami informatycznymi lubię spotykać się z przyjaciółmi. Cenię sobie dobre relacje z innymi ludźmi i uważam, że czas spędzony z bliskimi jest niezwykle ważny.",
-		"stanislaw": " Jestem uczniem klasy czwartej o profilu programista. Najbardziej interesuję się technologiami webowymi, głównie TypeScript w Vue i React. Poza programowaniem lubię zajmować się muzyką. ",
-		"wiktor": "Jestem uczniem klasy drugiej technikum i pasjonuję się programowaniem. Skupiam się głównie na front end developmentcie z wykorzystaniem frameworka Vue. Moim drugim ulubionym językiem programowania jest Python, który wykorzystuję do tworzenia różnego rodzaju API oraz do projektowania sztucznej inteligencji, jak chociażby ten projekt. W wolnym czasie lubię majsterkować i eksperymentować z prostą elektroniką. Mam trzy psy i jednego kota, które dają mi wiele radości i pozytywnej energii. Programowanie to dla mnie pasja i jestem bardzo zadowolony, że mogę rozwijać swoje umiejętności w tej dziedzinie."
-	},
-	"footer": {
-		"copy": "Cancel the cancer 2023 © wykonali Wiktor Fajkowski i Paweł Gołata\n",
-		"patreons": "Patroni projektu",
-		"socialMedia": "Sprawdź nasze social media"
-	},
-	"home": {
-		"heroButton": "Sprawdź teraz",
-		"heroMessage": "Dzięki naszemu modelowi sztucznej inteligencji sprawdzisz, czy znamiona na twojej skórze są zagrożeniem dla zdrowia. ",
-		"heroTitle": "Nie daj się zaskoczyć!",
-		"sectionThreeMessage": "Nasz projekt tworzymy z myślą o tym, by ułatwić wczesne wykrycie zmian nowotworowych skóry i zapobiegać ich rozwojowi. Rak to śmiertelna choroba, która atakuje niespodziewanie. Rocznie ok. 100tys. ludzi umiera na tę okropną chorobę. Dzięki wczesnemu wykrywaniu niebezpiecznych znamion mamy znacznie większe szanse na wyleczenie. Planujemy, aby każdy mógł sprawdzić czy jego zmiany skórne stanową zagrożenie i w razie potrzeby podjął leczenie, bądź skonsultował się z lekarzem dermatologiem lub onkologiem.",
-		"sectionThreeTitle": "Cel naszego projektu.",
-		"sectionTwoButton": "Sprawdź swoje znamiona",
-		"sectionTwoMessage": "Projekt jest przeznaczony dla wszystkich osób, które chcą sprawdzić swoje znamię i zidentyfikować, czy może ono stanowić zagrożenie dla zdrowia. Może on być szczególnie przydatny dla osób, które obawiają się, że ich zmiana skórna może być objawem nowotworu lub które chcą zwiększyć świadomość swojego stanu zdrowia skóry. Projekt ten jest skierowany do osób w każdym wieku i płci, a jego celem jest przyśpieszenie diagnozowania chorób skóry, takich jak czerniak, poprzez wykorzystanie sztucznej inteligencji do analizowania zdjęć znamion skórnych. Jednocześnie projekt ma na celu zwiększenie świadomości o konieczności regularnych wizyt kontrolnych u dermatologa w celu zwiększenia skuteczności leczenia poprzez szybsze wykrycie potencjalnie niebezpiecznych zmian skórnych. ",
-		"sectionTwoTitle": "Dla kogo jest ten projekt?"
-	},
-	"nav": {
-		"about": "O nas",
-		"home": "Strona główna",
-		"try": "Przetestuj"
-	},
-	"popup": {
-		"acceptPrivacy": "Akceptuję politykę prywatności",
-		"modelMessage": "Model przewiduje, że szansa na to, iż znamię {0} wynosi {1}% natomiast szansa na to, iż znamię {2} wynosi {3}%. Warto jednak pamiętać, że tylko lekarz może dokonać finalnej diagnozy.",
-		"modelTitle": "Co oznacza wynik?",
-		"privacyMessage": "Korzystając z naszej strony, twoje dane przechodzą przez serwery, na których funkcjonuje strona (Netlify, DigitalOcean). Twoje dane wykorzystujemy wyłącznie w celu diagnozy zmian skórnych i nigdzie ich nie zapisujemy. Życzymy miłego zwiedzania strony.",
-		"privacyTitle": "Polityka prywatności",
-		"warnMessage": "Wciąż udoskonalamy nasz model, by był jak najdokładniejszy. Pamiętaj jednak, że ma on obecnie dokładność 85% może on się więc czasem pomylić.",
-		"warnTitle": "Uwaga!"
-	},
-	"try": {
-		"backButton": "Cofnij",
-		"cropButton": "Wytnij",
-		"step": "Krok",
-		"stepOneButton": "Prześlij zdjęcie znamienia",
-		"stepOneMessasge": "Szybko i sprawnie sprawdź swoje znamiona, by spać w spokoju o swoje zdrowie.",
-		"stepThreeBadMessage": "Nasze AI wykryło, że to złośliwe znamię jednak pamiętaj, że zawsze może się pomylić dlatego warto iść do lekarza oraz na regularne wizyt. ",
-		"stepThreeGoodMessage": "Nasze AI wykryło, że to niegroźne znamię jednak pamiętaj, że zawsze może się pomylić dlatego warto iść do lekarza oraz na regularne wizyt. ",
-		"stepThreeLoadingMessage": "Prosimy o poczekanie aż nasz model sprawdzi twoje znamię.",
-		"stepThreeButton": "Sprawdź kolejne znamię",
-		"stepThreeFundraising": "Jeśli nasz projekt ci się podoba, wesprzyj nas!",
-		"stepThreeLoadingTitle": "Trwa sprawdzanie...",
-		"stepThreePredictionTitle": "Model jest pewny w",
-		"stepTwoMessage": "Przytnij zdjęcie swojego znamienia, tak aby znajdowało się w czerwonym kółku."
-	}
+  "about": {
+    "authorsTitle": "Autorzy",
+    "beginingsMessage": "Pomysł na projekt zrodził się podczas konkursu \"AI4youth\" organizowanego w naszej szkole przez firmę Intel. Naszym opiekunem, a zarazem prowadzącym szkolenie na etapie szkolnym był pan wicedyrektor Paweł Sankowski, któremu chcieliśmy z tego miejsca podziękować za opiekę nad projektem. Wraz z naszym projektem zostaliśmy finalistami przedsięwzięcia, ale nie poprzestaliśmy na tym i dalej rozwijamy projekt. ",
+    "beginingsTitle": "Początek projektu",
+    "mateusz": "Jestem uczniem drugiej klasy technikum o profilu programista. Wybór tej specjalizacji wynika z mojej pasji do tworzenia, a programowanie pozwala mi na rozwijanie tej pasji w bardzo ciekawy sposób. Przyjemność, jaką czerpię z programowania, jest dla mnie nieoceniona. W czasie wolnym uwielbiam rysować oraz tworzyć gry i proste programy w języku Python. Chętnie poszerzam swoją wiedzę z dziedziny programowania i ten projekt jest dla mnie idealnym sposobem na rozwijanie swoich umiejętności.",
+    "pawel": "Jestem Paweł, moim hobby jest tworzenie stron internetowych w frame worku Vue, które są łatwe w obsłudze i dostarczają użytkownikom wartościowe treści. Poza Vue moim drugim ulubionym językiem programowania jest Python. Doceniam jego prostotę i wszechstronność. Interesuję się również drukiem 3D i nowinkami technologicznymi. Fascynuje mnie, jak nowoczesne technologie mogą wpłynąć na nasze życie i jak można je wykorzystać do rozwiązywania problemów w różnych dziedzinach. Poza pracą nad projektami informatycznymi lubię spotykać się z przyjaciółmi. Cenię sobie dobre relacje z innymi ludźmi i uważam, że czas spędzony z bliskimi jest niezwykle ważny.",
+    "stanislaw": " Jestem uczniem klasy czwartej o profilu programista. Najbardziej interesuję się technologiami webowymi, głównie TypeScript w Vue i React. Poza programowaniem lubię zajmować się muzyką. ",
+    "wiktor": "Jestem uczniem klasy drugiej technikum i pasjonuję się programowaniem. Skupiam się głównie na front end developmentcie z wykorzystaniem frameworka Vue. Moim drugim ulubionym językiem programowania jest Python, który wykorzystuję do tworzenia różnego rodzaju API oraz do projektowania sztucznej inteligencji, jak chociażby ten projekt. W wolnym czasie lubię majsterkować i eksperymentować z prostą elektroniką. Mam trzy psy i jednego kota, które dają mi wiele radości i pozytywnej energii. Programowanie to dla mnie pasja i jestem bardzo zadowolony, że mogę rozwijać swoje umiejętności w tej dziedzinie."
+  },
+  "footer": {
+    "copy": "Cancel the cancer 2023 © wykonali Wiktor Fajkowski i Paweł Gołata\n",
+    "patreons": "Patroni projektu",
+    "socialMedia": "Sprawdź nasze social media"
+  },
+  "home": {
+    "heroButton": "Sprawdź teraz",
+    "heroMessage": "Dzięki naszemu modelowi sztucznej inteligencji sprawdzisz, czy znamiona na twojej skórze są zagrożeniem dla zdrowia. ",
+    "heroTitle": "Nie daj się zaskoczyć!",
+    "sectionThreeMessage": "Nasz projekt tworzymy z myślą o tym, by ułatwić wczesne wykrycie zmian nowotworowych skóry i zapobiegać ich rozwojowi. Rak to śmiertelna choroba, która atakuje niespodziewanie. Rocznie ok. 100tys. ludzi umiera na tę okropną chorobę. Dzięki wczesnemu wykrywaniu niebezpiecznych znamion mamy znacznie większe szanse na wyleczenie. Planujemy, aby każdy mógł sprawdzić czy jego zmiany skórne stanową zagrożenie i w razie potrzeby podjął leczenie, bądź skonsultował się z lekarzem dermatologiem lub onkologiem.",
+    "sectionThreeTitle": "Cel naszego projektu.",
+    "sectionTwoButton": "Sprawdź swoje znamiona",
+    "sectionTwoMessage": "Projekt jest przeznaczony dla wszystkich osób, które chcą sprawdzić swoje znamię i zidentyfikować, czy może ono stanowić zagrożenie dla zdrowia. Może on być szczególnie przydatny dla osób, które obawiają się, że ich zmiana skórna może być objawem nowotworu lub które chcą zwiększyć świadomość swojego stanu zdrowia skóry. Projekt ten jest skierowany do osób w każdym wieku i płci, a jego celem jest przyśpieszenie diagnozowania chorób skóry, takich jak czerniak, poprzez wykorzystanie sztucznej inteligencji do analizowania zdjęć znamion skórnych. Jednocześnie projekt ma na celu zwiększenie świadomości o konieczności regularnych wizyt kontrolnych u dermatologa w celu zwiększenia skuteczności leczenia poprzez szybsze wykrycie potencjalnie niebezpiecznych zmian skórnych. ",
+    "sectionTwoTitle": "Dla kogo jest ten projekt?"
+  },
+  "nav": {
+    "about": "O nas",
+    "home": "Strona główna",
+    "try": "Przetestuj"
+  },
+  "popup": {
+    "acceptPrivacy": "Akceptuję politykę prywatności",
+    "modelMessage": "Model przewiduje, że szansa na to, iż znamię {0} wynosi {1}% natomiast szansa na to, iż znamię {2} wynosi {3}%. Warto jednak pamiętać, że tylko lekarz może dokonać finalnej diagnozy.",
+    "modelTitle": "Co oznacza wynik?",
+    "privacyMessage": "Korzystając z naszej strony, twoje dane przechodzą przez serwery, na których funkcjonuje strona (Netlify, DigitalOcean). Twoje dane wykorzystujemy wyłącznie w celu diagnozy zmian skórnych i nigdzie ich nie zapisujemy. Życzymy miłego zwiedzania strony.",
+    "privacyTitle": "Polityka prywatności",
+    "warnMessage": "Wciąż udoskonalamy nasz model, by był jak najdokładniejszy. Pamiętaj jednak, że ma on obecnie dokładność 85% może on się więc czasem pomylić.",
+    "warnTitle": "Uwaga!"
+  },
+  "try": {
+    "backButton": "Cofnij",
+    "cropButton": "Wytnij",
+    "step": "Krok",
+    "stepOneButton": "Prześlij zdjęcie znamienia",
+    "stepOneMessasge": "Szybko i sprawnie sprawdź swoje znamiona, by spać w spokoju o swoje zdrowie.",
+    "stepThreeBadMessage": "Nasze AI wykryło, że to złośliwe znamię jednak pamiętaj, że zawsze może się pomylić dlatego warto iść do lekarza oraz na regularne wizyt. ",
+    "stepThreeGoodMessage": "Nasze AI wykryło, że to niegroźne znamię jednak pamiętaj, że zawsze może się pomylić dlatego warto iść do lekarza oraz na regularne wizyt. ",
+    "stepThreeLoadingMessage": "Prosimy o poczekanie aż nasz model sprawdzi twoje znamię.",
+    "stepThreeButton": "Sprawdź kolejne znamię",
+    "stepThreeFundraising": "Jeśli nasz projekt ci się podoba, wesprzyj nas!",
+    "stepThreeLoadingTitle": "Trwa sprawdzanie...",
+    "stepThreePredictionTitle": "Model jest pewny w",
+    "stepTwoMessage": "Przytnij zdjęcie swojego znamienia, tak aby znajdowało się w czerwonym kółku."
+  },
+  "work": {
+    "title": "Funkcja tymczasowo niedostępna!",
+    "content": "W związku z trwającymi pracami nad skutecznością naszego modelu postanowiliśmy chwilowo go zawiesić. W bliskiej przyszłości pojawi się tu więcej informacji na ten temat.",
+    "alt": "zdjęcie prac technicznych",
+    "back": "Strona główna"
+  }
 }
