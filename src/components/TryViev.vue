@@ -201,7 +201,7 @@ export default {
       const data = new FormData();
       data.append('image', image)
 
-      fetch('http://api.cancel-the-cancer.info/predict', {
+      fetch('https://api.cancel-the-cancer.info/predict', {
         method: "POST",
         body: data
       }).then(
