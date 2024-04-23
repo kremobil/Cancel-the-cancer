@@ -1,3 +1,4 @@
+p c
 {
   "about": {
     "authorsTitle": "Autorzy",
@@ -34,7 +35,7 @@
     "modelTitle": "Co oznacza wynik?",
     "privacyMessage": "Korzystając z naszej strony, twoje dane przechodzą przez serwery, na których funkcjonuje strona (Netlify, DigitalOcean). Twoje dane wykorzystujemy wyłącznie w celu diagnozy zmian skórnych i nigdzie ich nie zapisujemy. Życzymy miłego zwiedzania strony.",
     "privacyTitle": "Polityka prywatności",
-    "warnMessage": "Wciąż udoskonalamy nasz model, by był jak najdokładniejszy. Pamiętaj jednak, że ma on obecnie dokładność 85% może on się więc czasem pomylić.",
+    "warnMessage": "Pamiętaj że jest to wersja demonstracyjna strony gdyż oficjalny model bedzię dostępny dopiero po wytrenowaniu na nowym zestawie danych. Ma on obecnie dokładność na poziomie 92%, ale był trenowany na zdjęiach z drematoskopu może on się więc czasem pomylić.",
     "warnTitle": "Uwaga!"
   },
   "try": {
