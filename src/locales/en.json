@@ -34,7 +34,7 @@
 		"modelTitle": "What does the result mean?",
 		"privacyMessage": "By using our website, your data passes through the servers on which the website operates (Netlify, DigitalOcean). We use your data exclusively for the diagnosis of skin lesions and do not save it anywhere. We wish you a pleasant visit to the site.",
 		"privacyTitle": "Privacy policy",
-		"warnMessage": "We are still improving our model to make it as accurate as possible. However, keep in mind that it currently has an accuracy of 85%, so it may be wrong sometimes.",
+		"warnMessage": "Remember that this is a demo version of our model, the final product will be avaliable only when we train the model on a new dataset. This version currently has 92% accuracy, but since it was trained on photos taken by a dermatoscope, its evaluation might be wrong sometimes.",
 		"warnTitle": "Attention!"
 	},
 	"try": {
